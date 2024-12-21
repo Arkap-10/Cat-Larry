@@ -7,6 +7,7 @@ import ProductDetail from "./pages/ProductDetail";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import AccountPage from "./pages/AccountPage";
+import ContactPage from "./pages/ContactPage";
 import AuthPage from "./pages/AuthPage";
 import { useUser } from "./hooks/use-user";
 import { Loader2 } from "lucide-react";
@@ -42,6 +43,7 @@ function App() {
             <Route path="/checkout" component={CheckoutPage} />
             <Route path="/account" component={AccountPage} />
             <Route path="/auth" component={AuthPage} />
+            <Route path="/contact" component={ContactPage} />
           </Switch>
         </main>
       </ScrollArea>

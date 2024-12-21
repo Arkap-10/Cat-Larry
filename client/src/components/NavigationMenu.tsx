@@ -21,7 +21,7 @@ export default function NavigationMenu() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="font-bold text-xl">
-          Cutlery Co.
+          Catlery
         </Link>
 
         <nav className="flex items-center ml-6 space-x-4 lg:space-x-6">
@@ -36,6 +36,12 @@ export default function NavigationMenu() {
             variant={location === "/products" ? "secondary" : "ghost"}
           >
             <Link href="/products">Products</Link>
+          </Button>
+          <Button
+            asChild
+            variant={location === "/contact" ? "secondary" : "ghost"}
+          >
+            <Link href="/contact">Contact</Link>
           </Button>
         </nav>
 
