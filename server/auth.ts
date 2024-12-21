@@ -1,11 +1,11 @@
 import passport from "passport";
 import { IVerifyOptions, Strategy as LocalStrategy } from "passport-local";
-import { type Express } from "express";
+import { type Express, Request, Response } from "express";
 import session from "express-session";
 import createMemoryStore from "memorystore";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
-import { users, type User } from "@db/schema";
+import { users, type SelectUser } from "@db/schema";
 import { db } from "@db";
 import { eq } from "drizzle-orm";
 
@@ -31,7 +31,10 @@ const crypto = {
 
 declare global {
   namespace Express {
-    interface User extends User {}
+    interface User extends SelectUser {}
+    interface Request {
+      user?: SelectUser;
+    }
   }
 }
 
@@ -96,5 +99,15 @@ export function setupAuth(app: Express) {
     } catch (err) {
       done(err);
     }
+  });
+
+  app.get("/api/user", (req: Request, res: Response) => {
+    if (req.isAuthenticated() && req.user) {
+      // Only send necessary user information
+      const { password, ...userWithoutPassword } = req.user;
+      return res.json(userWithoutPassword);
+    }
+
+    res.status(401).send("Not authenticated");
   });
 }
