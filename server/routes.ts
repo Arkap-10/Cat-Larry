@@ -54,6 +54,20 @@ export function registerRoutes(app: Express): Server {
     }
 
     const { productId, quantity } = req.body;
+
+    if (quantity === 0) {
+      // Remove item from cart if quantity is 0
+      await db
+        .delete(cartItems)
+        .where(
+          and(
+            eq(cartItems.userId, req.user.id),
+            eq(cartItems.productId, productId)
+          )
+        );
+      return res.json({ message: "Item removed from cart" });
+    }
+
     const [existing] = await db
       .select()
       .from(cartItems)
@@ -66,11 +80,23 @@ export function registerRoutes(app: Express): Server {
       .limit(1);
 
     if (existing) {
+      const newQuantity = existing.quantity + quantity;
+      if (newQuantity <= 0) {
+        await db
+          .delete(cartItems)
+          .where(eq(cartItems.id, existing.id));
+        return res.json({ message: "Item removed from cart" });
+      }
+      
       await db
         .update(cartItems)
-        .set({ quantity: existing.quantity + quantity })
+        .set({ quantity: newQuantity })
         .where(eq(cartItems.id, existing.id));
     } else {
+      if (quantity <= 0) {
+        return res.status(400).send("Quantity must be positive");
+      }
+      
       await db.insert(cartItems).values({
         userId: req.user.id,
         productId,
