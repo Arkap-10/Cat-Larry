@@ -101,13 +101,84 @@ export function setupAuth(app: Express) {
     }
   });
 
+  app.post("/api/register", async (req, res, next) => {
+    try {
+      const { username, password, email, name } = req.body;
+      
+      // Check if user already exists
+      const [existingUser] = await db
+        .select()
+        .from(users)
+        .where(eq(users.username, username))
+        .limit(1);
+
+      if (existingUser) {
+        return res.status(400).send("Username already exists");
+      }
+
+      // Hash the password
+      const hashedPassword = await crypto.hash(password);
+
+      // Create the new user
+      const [newUser] = await db
+        .insert(users)
+        .values({
+          username,
+          password: hashedPassword,
+          email,
+          name,
+          address: null
+        })
+        .returning();
+
+      // Log the user in after registration
+      req.login(newUser, (err) => {
+        if (err) {
+          return next(err);
+        }
+        const { password: _, ...userWithoutPassword } = newUser;
+        return res.json(userWithoutPassword);
+      });
+    } catch (error) {
+      next(error);
+    }
+  });
+
+  app.post("/api/login", (req, res, next) => {
+    passport.authenticate("local", (err: any, user: Express.User | false, info: IVerifyOptions) => {
+      if (err) {
+        return next(err);
+      }
+
+      if (!user) {
+        return res.status(400).send(info.message ?? "Login failed");
+      }
+
+      req.login(user, (err) => {
+        if (err) {
+          return next(err);
+        }
+
+        const { password: _, ...userWithoutPassword } = user;
+        return res.json(userWithoutPassword);
+      });
+    })(req, res, next);
+  });
+
+  app.post("/api/logout", (req, res) => {
+    req.logout((err) => {
+      if (err) {
+        return res.status(500).send("Logout failed");
+      }
+      res.json({ message: "Logout successful" });
+    });
+  });
+
   app.get("/api/user", (req: Request, res: Response) => {
     if (req.isAuthenticated() && req.user) {
-      // Only send necessary user information
-      const { password, ...userWithoutPassword } = req.user;
+      const { password: _, ...userWithoutPassword } = req.user;
       return res.json(userWithoutPassword);
     }
-
     res.status(401).send("Not authenticated");
   });
 }

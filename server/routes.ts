@@ -99,21 +99,23 @@ export function registerRoutes(app: Express): Server {
       })
       .returning();
 
-    const cartItems = await db
+    const userCartItems = await db
       .select()
       .from(cartItems)
       .where(eq(cartItems.userId, req.user.id));
 
-    for (const item of cartItems) {
+    for (const item of userCartItems) {
+      const [product] = await db
+        .select()
+        .from(products)
+        .where(eq(products.id, item.productId))
+        .limit(1);
+
       await db.insert(orderItems).values({
         orderId: order.id,
         productId: item.productId,
         quantity: item.quantity,
-        price: (await db
-          .select()
-          .from(products)
-          .where(eq(products.id, item.productId))
-          .limit(1))[0].price,
+        price: product.price,
       });
     }
 
