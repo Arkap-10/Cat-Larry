@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRoute } from "wouter";
 import { useProduct } from "@/hooks/use-products";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCart } from "@/hooks/use-cart";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,9 +9,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Minus, Plus } from "lucide-react";
+import ReviewSection from "@/components/ReviewSection";
 
 export default function ProductDetail() {
   const [, params] = useRoute("/product/:id");
+  const queryClient = useQueryClient();
+  const { data: reviews } = useQuery({
+    queryKey: [`/api/products/${params?.id}/reviews`],
+    enabled: !!params?.id
+  });
   const { product, isLoading } = useProduct(parseInt(params?.id || "0"));
   const { addToCart } = useCart();
   const { toast } = useToast();
@@ -101,6 +108,14 @@ export default function ProductDetail() {
             <li>Stock: {product.stock} available</li>
             <li>SKU: {product.id}</li>
           </ul>
+        </div>
+
+        <div className="mt-8">
+          <ReviewSection
+            productId={product.id}
+            reviews={reviews?.data || []}
+            onReviewAdded={() => queryClient.invalidateQueries([`/api/products/${product.id}/reviews`])}
+          />
         </div>
       </div>
     </div>

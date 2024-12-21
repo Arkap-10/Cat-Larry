@@ -2,8 +2,8 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { setupAuth } from "./auth";
 import { db } from "@db";
-import { products, orders, orderItems, cartItems, users } from "@db/schema";
-import { eq, and } from "drizzle-orm";
+import { products, orders, orderItems, cartItems, users, reviews } from "@db/schema";
+import { eq, and, desc } from "drizzle-orm";
 
 export function registerRoutes(app: Express): Server {
   setupAuth(app);
@@ -124,6 +124,43 @@ export function registerRoutes(app: Express): Server {
       .where(eq(cartItems.userId, req.user.id));
 
     res.json(order);
+  });
+
+  // Reviews routes
+  app.get("/api/products/:id/reviews", async (req, res) => {
+    const productId = parseInt(req.params.id);
+    const productReviews = await db
+      .select()
+      .from(reviews)
+      .where(eq(reviews.productId, productId))
+      .orderBy(desc(reviews.createdAt));
+    res.json(productReviews);
+  });
+
+  app.post("/api/products/:id/reviews", async (req, res) => {
+    if (!req.user) {
+      return res.status(401).send("Not authenticated");
+    }
+
+    const productId = parseInt(req.params.id);
+    const { rating, comment } = req.body;
+
+    // Validate rating
+    if (rating < 1 || rating > 5) {
+      return res.status(400).send("Rating must be between 1 and 5");
+    }
+
+    const [review] = await db
+      .insert(reviews)
+      .values({
+        productId,
+        userId: req.user.id,
+        rating,
+        comment,
+      })
+      .returning();
+
+    res.json(review);
   });
 
   const httpServer = createServer(app);

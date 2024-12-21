@@ -49,9 +49,30 @@ export const cartItems = pgTable("cart_items", {
 });
 
 // Relations
+export const reviews = pgTable("reviews", {
+  id: serial("id").primaryKey(),
+  productId: integer("product_id").references(() => products.id).notNull(),
+  userId: integer("user_id").references(() => users.id).notNull(),
+  rating: integer("rating").notNull(),
+  comment: text("comment"),
+  createdAt: timestamp("created_at").defaultNow().notNull()
+});
+
+export const reviewsRelations = relations(reviews, ({ one }) => ({
+  product: one(products, {
+    fields: [reviews.productId],
+    references: [products.id]
+  }),
+  user: one(users, {
+    fields: [reviews.userId],
+    references: [users.id]
+  })
+}));
+
 export const productsRelations = relations(products, ({ many }) => ({
   orderItems: many(orderItems),
-  cartItems: many(cartItems)
+  cartItems: many(cartItems),
+  reviews: many(reviews)
 }));
 
 export const ordersRelations = relations(orders, ({ many, one }) => ({
@@ -74,12 +95,15 @@ export const insertProductSchema = createInsertSchema(products);
 export const selectProductSchema = createSelectSchema(products);
 export const insertOrderSchema = createInsertSchema(orders);
 export const selectOrderSchema = createSelectSchema(orders);
+export const insertReviewSchema = createInsertSchema(reviews);
+export const selectReviewSchema = createSelectSchema(reviews);
 
 // Types
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
-export type SelectUser = typeof users.$inferSelect; // Add SelectUser type
+export type SelectUser = typeof users.$inferSelect;
 export type Product = typeof products.$inferSelect;
 export type Order = typeof orders.$inferSelect;
 export type OrderItem = typeof orderItems.$inferSelect;
+export type Review = typeof reviews.$inferSelect;
 export type CartItem = typeof cartItems.$inferSelect;
