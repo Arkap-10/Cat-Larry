@@ -10,11 +10,12 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, Minus, Plus } from "lucide-react";
 import ReviewSection from "@/components/ReviewSection";
+import type { Review } from "@db/schema";
 
 export default function ProductDetail() {
   const [, params] = useRoute("/product/:id");
   const queryClient = useQueryClient();
-  const { data: reviews } = useQuery({
+  const { data: reviews = [] } = useQuery<Review[]>({
     queryKey: [`/api/products/${params?.id}/reviews`],
     enabled: !!params?.id
   });
@@ -113,8 +114,8 @@ export default function ProductDetail() {
         <div className="mt-8">
           <ReviewSection
             productId={product.id}
-            reviews={reviews?.data || []}
-            onReviewAdded={() => queryClient.invalidateQueries([`/api/products/${product.id}/reviews`])}
+            reviews={reviews}
+            onReviewAdded={() => queryClient.invalidateQueries({ queryKey: [`/api/products/${product.id}/reviews`] })}
           />
         </div>
       </div>
