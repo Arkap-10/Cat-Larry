@@ -10,20 +10,42 @@ export default function HomePage() {
 
   return (
     <div className="space-y-16">
-      <section className="relative h-[600px] -mx-4 flex items-center justify-center bg-gradient-to-r from-primary/10 via-primary/5 to-background">
-        <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-10" />
-        <div className="relative text-center space-y-6 max-w-2xl mx-auto px-4">
-          <h1 className="text-5xl font-bold text-primary tracking-tight">
-            Precision Crafted Cutlery
-          </h1>
+      <section className="relative h-[600px] -mx-4 flex items-center justify-center overflow-hidden">
+        {/* Background layers */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-background" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNCAxNCAxNC02LjI2OCAxNC0xNCAyLjI2OCAxNCAxNCAxNHoiIGZpbGw9ImN1cnJlbnRDb2xvciIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-5" />
+        <div className="absolute inset-0">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(4rem,1fr))] h-full opacity-10">
+            {Array.from({ length: 100 }).map((_, i) => (
+              <div
+                key={i}
+                className="border-[0.5px] border-primary/20"
+                style={{
+                  opacity: Math.random() * 0.3 + 0.1,
+                  transform: `rotate(${Math.random() * 360}deg)`
+                }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="relative text-center space-y-8 max-w-2xl mx-auto px-4">
+          <div className="space-y-4">
+            <h1 className="text-5xl font-bold text-primary tracking-tight leading-tight">
+              Precision Crafted
+              <span className="block">Cutlery</span>
+            </h1>
+            <div className="h-1 w-20 mx-auto bg-primary/20 rounded-full" />
+          </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Experience the artistry of fine dining with our handcrafted collection of premium kitchen knives and culinary tools.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button asChild size="lg" className="px-8">
+            <Button asChild size="lg" className="px-8 transition-transform hover:scale-105">
               <Link href="/products">Shop Collection</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="px-8">
+            <Button asChild size="lg" variant="outline" className="px-8 hover:bg-primary/5">
               <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
