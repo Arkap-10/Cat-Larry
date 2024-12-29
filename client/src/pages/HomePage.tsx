@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-background" />
 
         {/* Cutlery Pattern Background */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iY3VycmVudENvbG9yIiBmaWxsLW9wYWNpdHk9IjAuMDUiPgogICAgPHBhdGggZD0iTTMwIDIwaDJ2NjBoLTJ6TTY4IDIwaDJ2NjBoLTJ6Ii8+CiAgICA8cGF0aCBkPSJNMjUgNDBoMTB2MmgtMTB6TTY1IDQwaDEwdjJoLTEweiIvPgogICAgPHBhdGggZD0iTTI1IDYwaDEwdjJoLTEwek02NSA2MGgxMHYyaC0xMHoiLz4KICAgIDxwYXRoIGQ9Ik00MCAyNWMyLjc2IDAgNSAyLjI0IDUgNXYyMGMwIDIuNzYtMi4yNCA1LTUgNXMtNS0yLjI0LTUtNVYzMGMwLTIuNzYgMi4yNC01IDUtNXpNNjAgMjVjMi43NiAwIDUgMi4yNCA1IDV2MjBjMCAyLjc2LTIuMjQgNS01IDVzLTUtMi4yNC01LTVWMzBjMC0yLjc2IDIuMjQtNSA1LTV6Ii8+CiAgPC9nPgo8L3N2Zz4=')] opacity-[0.15] transform scale-[2]" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgZmlsbD0iY3VycmVudENvbG9yIiBmaWxsLW9wYWNpdHk9IjAuMDUiPgogICAgPHBhdGggZD0iTTMwIDIwaDJ2NjBoLTJ6TTY4IDIwaDJ2NjBoLTJ6Ii8+CiAgICA8cGF0aCBkPSJNMjUgNDBoMTB2MmgtMTB6TTY1IDQwaDEwdjJoLTEweiIvPgogICAgPHBhdGggZD0iTTI1IDYwaDEwdjJoLTEwek02NSA2MGgxMHYyaC0xMHoiLz4KICAgIDxwYXRoIGQ9Ik00MCAyNWMyLjc2IDAgNSAyLjI0IDUgNXYyMGMwIDIuNzYtMi4yNCA1LTUgNXMtNS0yLjI0LTUtNVYzMGMwLTIuNzYgMi4yNC01IDUtNXpNNjAgMjVjMi43NiAwIDUgMi4yNCA1IDV2MjBjMCAyLjc2LTIuMjQgNS01IDVzLTUtMi4yNC01LTVWMzBjMC0yLjc2IDIuMjQtNSA1LTV6Ii8+CiAgPC9nPgo8L3N2Zz4=')] opacity-[0.25] transform scale-[2]" />
 
         {/* Animated Grid Pattern */}
         <div className="absolute inset-0">
@@ -25,12 +25,12 @@ export default function HomePage() {
                 key={i}
                 className="border-[0.5px] border-primary/10 relative overflow-hidden transition-all duration-1000"
                 style={{
-                  opacity: Math.random() * 0.2 + 0.1,
+                  opacity: Math.random() * 0.3 + 0.2,
                   transform: `rotate(${Math.random() * 45}deg)`,
                 }}
               >
                 <div 
-                  className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"
                   style={{
                     transformOrigin: 'center',
                     animation: `pulse ${8 + Math.random() * 4}s infinite`
@@ -43,8 +43,9 @@ export default function HomePage() {
 
         {/* Decorative Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-primary/5 blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 rounded-full bg-primary/5 blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-40 h-40 rounded-full bg-primary/10 blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full bg-primary/10 blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
         </div>
 
         {/* Content */}
@@ -158,9 +159,9 @@ export default function HomePage() {
   );
 }
 
-      <style jsx global>{`
-        @keyframes pulse {
-          0%, 100% { transform: scale(1); opacity: 0.1; }
-          50% { transform: scale(1.1); opacity: 0.2; }
-        }
-      `}</style>
+<style jsx global>{`
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.1; }
+    50% { transform: scale(1.1); opacity: 0.2; }
+  }
+`}</style>
