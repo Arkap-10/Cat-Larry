@@ -15,7 +15,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
       title: "Message sent",
@@ -31,7 +31,8 @@ export default function ContactPage() {
       <div className="text-center">
         <h1 className="text-3xl font-bold">Contact Us</h1>
         <p className="text-muted-foreground mt-2">
-          We're here to help! Send us a message and we'll respond as soon as possible.
+          We're here to help! Send us a message and we'll respond as soon as
+          possible.
         </p>
       </div>
 
@@ -46,7 +47,12 @@ export default function ContactPage() {
                 <Input name="name" placeholder="Your Name" required />
               </div>
               <div>
-                <Input name="email" type="email" placeholder="Email Address" required />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email Address"
+                  required
+                />
               </div>
               <div>
                 <Input name="subject" placeholder="Subject" required />
@@ -92,7 +98,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p className="text-muted-foreground">
-                      123 Catlery Street<br />
+                      123 Catlery Street
+                      <br />
                       San Francisco, CA 94105
                     </p>
                   </div>
@@ -102,8 +109,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold">Business Hours</h3>
                     <p className="text-muted-foreground">
-                      Monday - Friday: 9:00 AM - 6:00 PM PST<br />
-                      Saturday: 10:00 AM - 4:00 PM PST<br />
+                      Monday - Friday: 9:00 AM - 6:00 PM PST
+                      <br />
+                      Saturday: 10:00 AM - 4:00 PM PST
+                      <br />
                       Sunday: Closed
                     </p>
                   </div>
@@ -120,7 +129,8 @@ export default function ContactPage() {
                 <a href="/faq" className="text-primary hover:underline">
                   FAQ section
                 </a>{" "}
-                for quick answers to common questions about our products and services.
+                (not in service right not) for quick answers to common questions
+                about our products and services.
               </p>
             </CardContent>
           </Card>
