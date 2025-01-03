@@ -28,13 +28,14 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6 text-primary">The Organization</h2>
             <div className="prose prose-lg prose-invert max-w-none">
               <p className="text-primary/80">
-                Cat Larry Exports is a prestigious family-run business with over 50 years of heritage in manufacturing stainless steel metal products for the hospitality industry. Under the leadership of Mr. Anil Kumar Rastogi, representing the third generation, the company established its export-oriented manufacturing facility in 1994.
+                The company is more than 50 years old family run business involved in manufacturing stainless steel metal products for the hospitality industry headed by Mr. Anil Kumar Rastogi, of the third generation, sat an export oriented manufacturing factory in just 22000 sq/ft premises, in the year 1994 with basic plant and machinery.
               </p>
               <p className="text-primary/80 mt-4">
-                Starting from a modest 22,000 sq/ft premises, we have expanded five-fold over 23 years, now operating from a state-of-the-art 120,000 sq/ft facility. Our growth is marked by unwavering commitment to quality, timely deliveries, innovative product design, and advanced production techniques.
+                In 23 years we progressed five folds as a benchmark in terms of quality, timely deliveries, product designing & production techniques with a factory spreading over 120000 sq/ft manufacturing diversified product ranges from a daily utility of a spoon to the rolled top chafers, induction chafers & modern day vacuum technology producing vacuum servers, coffee / Tea urns & vacuum chafers catering five star hotels & casinos globally.
               </p>
               <p className="text-primary/80 mt-4">
-                Today, our product range spans from essential cutlery to sophisticated equipment like rolled top chafers, induction chafers, and modern vacuum technology products, serving five-star hotels and casinos worldwide.
+                The entire manufacturing operations are executed under one single roof along with traditional ways of forging till high-tech CNC tooling machines .Our infrastructure enables us to equip a five star hotel with a complete range of food serving articles.
+
               </p>
             </div>
           </CardContent>
@@ -51,10 +52,10 @@ export default function AboutPage() {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Factory className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-primary">Integrated Manufacturing</h3>
+                <h3 className="text-xl font-semibold text-primary">Our Products</h3>
               </div>
               <p className="text-primary/80">
-                Our entire manufacturing operation is executed under one roof, combining traditional forging methods with high-tech CNC tooling machines. This integrated approach enables us to equip five-star hotels with a complete range of food serving articles.
+                At Cat Larry we manufacture high quality stainless steel products for restaurants, hotels & banquets. Our product line comprises chafers, buffet accessories, hollowware, trays and countless other products.
               </p>
             </CardContent>
           </Card>
@@ -68,7 +69,8 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-primary">Quality Assurance</h3>
               </div>
               <p className="text-primary/80">
-                Our products meet international standards of quality and aesthetics, backed by rigorous testing and quality control processes at every stage of production.
+                Being basic manufacturers with a team of engineers & infrastructure we master in developing customized products which match international standards of quality & aesthetics.
+
               </p>
             </CardContent>
           </Card>
@@ -88,7 +90,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-primary">PVD Coating</h3>
               </div>
               <p className="text-primary/80">
-                Our advanced Physical Vapor Deposition (PVD) coating technology uses specialized materials like ZrN, CrN, and TiCN, applied using cutting-edge Lateral Rotating Arc-Cathodes technology.
+                This study examines die cavity wear in a clinching tool used for joining lightweight materials, specifically thin hot-dip galvanized steel sheets. The tool's cavity was coated with PVD coatings like ZrN, CrN, and TiCN, applied using Lateral Rotating Arc-Cathodes technology.
               </p>
             </CardContent>
           </Card>
@@ -102,7 +104,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-primary">Teflon Coating</h3>
               </div>
               <p className="text-primary/80">
-                We utilize state-of-the-art PTFE coating technology to enhance the functionality and durability of our products, ensuring superior non-stick performance and longevity.
+                PTFE was accidentally discovered in 2017 by Roy Plunkett at DuPont while attempting to create a new refrigerant. The gas polymerized under high pressure, catalyzed by iron from its container, forming a slippery, waxy material. Kinetic Chemicals later patented the fluorinated plastic and trademarked it as Teflon.
               </p>
             </CardContent>
           </Card>

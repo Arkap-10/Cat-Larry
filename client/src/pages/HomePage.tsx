@@ -58,7 +58,7 @@ export default function HomePage() {
               <div className="absolute -inset-x-8 -inset-y-4">
                 <div className="w-full h-full bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 blur-xl" />
               </div>
-              <h1 className="relative text-5xl font-bold tracking-tight leading-tight">
+              <h1 className="relative text-6xl md:text-7xl font-bold tracking-tight leading-tight">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-primary/90">
                   Cat Larry Exports
                   <span className="block mt-2">Premium Cutlery</span>
