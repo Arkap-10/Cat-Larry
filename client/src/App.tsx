@@ -8,6 +8,7 @@ import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import AccountPage from "./pages/AccountPage";
 import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
 import AuthPage from "./pages/AuthPage";
 import { useUser } from "./hooks/use-user";
 import { Loader2 } from "lucide-react";
@@ -37,6 +38,7 @@ function App() {
         <main className="container mx-auto px-4 py-8">
           <Switch>
             <Route path="/" component={HomePage} />
+            <Route path="/about" component={AboutPage} />
             <Route path="/products" component={ProductsPage} />
             <Route path="/product/:id" component={ProductDetail} />
             <Route path="/cart" component={CartPage} />

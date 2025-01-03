@@ -33,6 +33,12 @@ export default function NavigationMenu() {
           </Button>
           <Button
             asChild
+            variant={location === "/about" ? "secondary" : "ghost"}
+          >
+            <Link href="/about">About</Link>
+          </Button>
+          <Button
+            asChild
             variant={location === "/products" ? "secondary" : "ghost"}
           >
             <Link href="/products">Products</Link>
