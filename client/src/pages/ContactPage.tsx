@@ -83,7 +83,7 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 mt-1 text-primary" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">support@catlery.com</p>
+                    <p className="text-muted-foreground">support@catlarryexports.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p className="text-muted-foreground">
-                      123 Catlery Street
+                      123 Cat Larry Street
                       <br />
                       San Francisco, CA 94105
                     </p>

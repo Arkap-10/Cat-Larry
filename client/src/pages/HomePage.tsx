@@ -32,7 +32,7 @@ export default function HomePage() {
                   transform: `rotate(${Math.random() * 45}deg)`,
                 }}
               >
-                <div 
+                <div
                   className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"
                   style={{
                     transformOrigin: 'center',
@@ -60,8 +60,8 @@ export default function HomePage() {
               </div>
               <h1 className="relative text-5xl font-bold tracking-tight leading-tight">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-primary/90">
-                  Precision Crafted
-                  <span className="block mt-2">Cutlery</span>
+                  Cat Larry Exports
+                  <span className="block mt-2">Premium Cutlery</span>
                 </span>
               </h1>
             </div>

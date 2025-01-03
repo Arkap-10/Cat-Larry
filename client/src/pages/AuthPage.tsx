@@ -54,7 +54,7 @@ export default function AuthPage() {
     <div className="min-h-screen flex items-center justify-center bg-background">
       <Card className="w-full max-w-md mx-4">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl text-center">Welcome to Cutlery Co.</CardTitle>
+          <CardTitle className="text-2xl text-center">Welcome to Cat Larry Exports</CardTitle>
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="login">
