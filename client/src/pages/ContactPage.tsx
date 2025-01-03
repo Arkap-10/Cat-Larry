@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
 
 export default function ContactPage() {
   const { toast } = useToast();
@@ -83,44 +83,33 @@ export default function ContactPage() {
                   <Mail className="h-5 w-5 mt-1 text-primary" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-muted-foreground">support@catlarryexports.com</p>
+                    <p className="text-muted-foreground">anupam@catlarry.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="h-5 w-5 mt-1 text-primary" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">1-800-CATLERY</p>
+                    <p className="text-muted-foreground">+91-7454948779</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <MapPin className="h-5 w-5 mt-1 text-primary" />
                   <div>
-                    <h3 className="font-semibold">Address</h3>
+                    <h3 className="font-semibold">Office Address</h3>
                     <p className="text-muted-foreground">
-                      123 Cat Larry Street
+                      Head Office, Factory & Showroom
+                      Behind Reliance Petrol Pump,
+                      Lakri Fazalpur, Delhi Road,
                       <br />
-                      San Francisco, CA 94105
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <Clock className="h-5 w-5 mt-1 text-primary" />
-                  <div>
-                    <h3 className="font-semibold">Business Hours</h3>
-                    <p className="text-muted-foreground">
-                      Monday - Friday: 9:00 AM - 6:00 PM PST
-                      <br />
-                      Saturday: 10:00 AM - 4:00 PM PST
-                      <br />
-                      Sunday: Closed
+                       Moradabad
+                      Moradabad-244001(U.P), INDIA.
                     </p>
                   </div>
                 </div>
               </div>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className="pt-6">
               <h3 className="font-semibold mb-2">Customer Support</h3>
