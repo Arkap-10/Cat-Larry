@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Loader2 } from "lucide-react";
 
@@ -38,10 +38,7 @@ export default function ContactPage() {
 
       <div className="grid md:grid-cols-2 gap-8">
         <Card>
-          <CardHeader>
-            <CardTitle>Send us a Message</CardTitle>
-          </CardHeader>
-          <CardContent>
+          <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Input name="name" placeholder="Your Name" required />
@@ -123,7 +120,6 @@ export default function ContactPage() {
               </div>
             </CardContent>
           </Card>
-
         </div>
       </div>
     </div>
