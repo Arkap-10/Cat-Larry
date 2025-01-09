@@ -34,12 +34,9 @@ export default function ProductCard({ product }: ProductCardProps) {
               {product.description}
             </p>
           </div>
-          <div className="mt-6 flex items-center justify-between">
+          <div className="mt-6">
             <p className="text-lg font-semibold text-primary">
               ${Number(product.price).toFixed(2)}
-            </p>
-            <p className="text-sm text-muted-foreground">
-              {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
             </p>
           </div>
         </div>
