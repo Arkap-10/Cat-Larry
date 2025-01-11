@@ -10,12 +10,12 @@ export default function ProductsPage() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("all");
 
-  const categories = Array.from(new Set(products.map(p => p.category)));
+  const categories = Array.from(new Set(products.map(p => p.category_id)));
   
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(search.toLowerCase()) ||
                          product.description.toLowerCase().includes(search.toLowerCase());
-    const matchesCategory = category === "all" || product.category === category;
+    const matchesCategory = category === "all" || product.category_id === category;
     return matchesSearch && matchesCategory;
   });
 
