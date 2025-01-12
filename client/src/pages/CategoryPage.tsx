@@ -1,12 +1,19 @@
+import { useState } from "react";
 import { useRoute, Link } from "wouter";
-import { categories } from "@/lib/data";
+import { categories, products } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ChevronLeft } from "lucide-react";
+import { ImageViewer } from "@/components/ImageViewer";
 
 export default function CategoryPage() {
   const [, params] = useRoute("/category/:slug");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const category = categories.find(cat => cat.slug === params?.slug);
+  const categoryProducts = products.filter(product => product.categorySlug === params?.slug);
 
   if (!category) {
     return (
@@ -39,12 +46,48 @@ export default function CategoryPage() {
         )}
       </div>
 
-      {/* For now, we'll show a message since we don't have products data yet */}
-      <div className="text-center py-8">
-        <p className="text-muted-foreground">
-          Products for this category will be available soon.
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categoryProducts.map((product) => (
+          <Card key={product.id} className="flex flex-col">
+            <CardContent className="p-6 space-y-4">
+              <AspectRatio ratio={4/3} className="bg-muted overflow-hidden rounded-lg">
+                <img
+                  src={product.imageUrl}
+                  alt={product.description}
+                  className="object-cover w-full h-full cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => setSelectedImage(product.imageUrl)}
+                  onError={(e) => {
+                    const img = e.target as HTMLImageElement;
+                    img.src = "/images/placeholder.jpg";
+                  }}
+                />
+              </AspectRatio>
+              <div className="space-y-2">
+                <div className="flex justify-between items-start">
+                  <h3 className="font-medium">{product.id}</h3>
+                  <Badge variant="secondary">{product.finish}</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">{product.description}</p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
+
+      {categoryProducts.length === 0 && (
+        <div className="text-center py-8">
+          <p className="text-muted-foreground">
+            No products available in this category.
+          </p>
+        </div>
+      )}
+
+      <ImageViewer
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageUrl={selectedImage || ""}
+        alt="Product full size view"
+      />
     </div>
   );
 }
