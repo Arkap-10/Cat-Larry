@@ -1,5 +1,7 @@
-import { useRoute } from "wouter";
+import { useRoute, Link } from "wouter";
 import { categories } from "@/lib/data";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft } from "lucide-react";
 
 export default function CategoryPage() {
   const [, params] = useRoute("/category/:slug");
@@ -21,6 +23,15 @@ export default function CategoryPage() {
 
   return (
     <div className="container mx-auto px-4 py-8 space-y-6">
+      <div className="flex items-center gap-4">
+        <Button asChild variant="outline">
+          <Link href="/products">
+            <ChevronLeft className="h-4 w-4 mr-2" />
+            Back to Products
+          </Link>
+        </Button>
+      </div>
+
       <div className="space-y-2">
         <h1 className="text-3xl font-bold">{category.name}</h1>
         {category.description && (
