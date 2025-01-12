@@ -5,6 +5,13 @@ export interface Category {
   description?: string;
 }
 
+export interface Product {
+  id: string;
+  description: string;
+  finish: string;
+  categorySlug: string;
+}
+
 export const categories: Category[] = [
   {
     id: 1,
@@ -65,5 +72,116 @@ export const categories: Category[] = [
     name: "Teflon Servers",
     slug: "teflon-servers",
     description: "High-quality teflon serving solutions"
+  }
+];
+
+export const products: Product[] = [
+  {
+    id: "SR060624SS",
+    description: "SKARET SQUARE RISER 6 X6 X24.5'' SS",
+    finish: "Mirror Polish",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR060612SS",
+    description: "SKARET SQUARE RISER 6 X6 X12.5'' SS",
+    finish: "Mirror Polish",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR141409SS",
+    description: "SKARET SQUARE RISER 14 X 14 X 9'' SS",
+    finish: "Mirror Polish",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR141407SS",
+    description: "SKARET SQUARE RISER 14 X 14 X 7'' SS",
+    finish: "Mirror Polish",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR141405SS",
+    description: "SKARET SQUARE RISER 14 X 14 X 5'' SS",
+    finish: "Mirror Polish",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR060624TB",
+    description: "SKARET SQUARE RISER 6 X6 X24.5'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR060612TB",
+    description: "SKARET SQUARE RISER 6 X6 X12.5'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR141409TB",
+    description: "SKARET SQUARE RISER 14 X 14 X 9'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR141407TB",
+    description: "SKARET SQUARE RISER 14 X 14 X 7'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SR141409TB",
+    description: "SKARET SQUARE RISER 14 X 14 X 5'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SRHX070724TB",
+    description: "HEXAGON  RISER 7 X 7 X24.5'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SRHX070712TB",
+    description: "HEXAGON  RISER 7 X 7 X 12.5'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SRHX101009TB",
+    description: "HEXAGON  RISER 10.5 X 10.5 X 9.5'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SRHX101007TB",
+    description: "HEXAGON  RISER 10.5 X 10.5 X 7.5'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "SRHX101006TB",
+    description: "HEXAGON  RISER 10.5 X 10.5 X 6'' TEFLON BLACK",
+    finish: "Black teflon",
+    categorySlug: "risers"
+  },
+  {
+    id: "DS4TSS",
+    description: "SKARET DISPLAY STAND 12 SHELVES  31.5'' X 15''X 28.5'' SS",
+    finish: "Standalone",
+    categorySlug: "risers"
+  },
+  {
+    id: "DS3TSS",
+    description: "SKARET DISPLAY STAND 3 TIER 24'' X 9'' X 20'' SS",
+    finish: "Standalone",
+    categorySlug: "risers"
+  },
+  {
+    id: "DSST04",
+    description: "SKARET DISPLAY STOOL SET OF 4",
+    finish: "Standalone",
+    categorySlug: "risers"
   }
 ];

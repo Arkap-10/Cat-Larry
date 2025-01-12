@@ -1,12 +1,15 @@
 import { useRoute, Link } from "wouter";
-import { categories } from "@/lib/data";
+import { categories, products } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { ChevronLeft } from "lucide-react";
 
 export default function CategoryPage() {
   const [, params] = useRoute("/category/:slug");
 
   const category = categories.find(cat => cat.slug === params?.slug);
+  const categoryProducts = products.filter(product => product.categorySlug === params?.slug);
 
   if (!category) {
     return (
@@ -39,12 +42,29 @@ export default function CategoryPage() {
         )}
       </div>
 
-      {/* For now, we'll show a message since we don't have products data yet */}
-      <div className="text-center py-8">
-        <p className="text-muted-foreground">
-          Products for this category will be available soon.
-        </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {categoryProducts.map((product) => (
+          <Card key={product.id} className="flex flex-col">
+            <CardContent className="p-6">
+              <div className="space-y-2">
+                <div className="flex justify-between items-start">
+                  <h3 className="font-medium">{product.id}</h3>
+                  <Badge variant="secondary">{product.finish}</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">{product.description}</p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
+
+      {categoryProducts.length === 0 && (
+        <div className="text-center py-8">
+          <p className="text-muted-foreground">
+            No products available in this category.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
