@@ -3,6 +3,7 @@ import { categories, products } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ChevronLeft } from "lucide-react";
 
 export default function CategoryPage() {
@@ -45,7 +46,18 @@ export default function CategoryPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categoryProducts.map((product) => (
           <Card key={product.id} className="flex flex-col">
-            <CardContent className="p-6">
+            <CardContent className="p-6 space-y-4">
+              <AspectRatio ratio={4/3} className="bg-muted overflow-hidden rounded-lg">
+                <img
+                  src={product.imageUrl}
+                  alt={product.description}
+                  className="object-cover w-full h-full"
+                  onError={(e) => {
+                    const img = e.target as HTMLImageElement;
+                    img.src = "/images/placeholder.jpg";
+                  }}
+                />
+              </AspectRatio>
               <div className="space-y-2">
                 <div className="flex justify-between items-start">
                   <h3 className="font-medium">{product.id}</h3>
