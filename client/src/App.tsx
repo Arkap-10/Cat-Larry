@@ -13,7 +13,7 @@ function App() {
     <div className="min-h-screen bg-background">
       <NavigationMenu />
       <ScrollArea className="h-[calc(100vh-4rem)]">
-        <main>
+        <main className="container mx-auto px-4">
           <Switch>
             <Route path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
