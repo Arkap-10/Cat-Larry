@@ -1,6 +1,7 @@
 import { Switch, Route } from "wouter";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import NavigationMenu from "./components/NavigationMenu";
+import Breadcrumb from "./components/Breadcrumb";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetail from "./pages/ProductDetail";
@@ -13,7 +14,8 @@ function App() {
     <div className="min-h-screen bg-background">
       <NavigationMenu />
       <ScrollArea className="h-[calc(100vh-4rem)]">
-        <main>
+        <Breadcrumb />
+        <main className="container mx-auto px-4">
           <Switch>
             <Route path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
