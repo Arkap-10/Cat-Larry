@@ -82,7 +82,7 @@ export const products: Product[] = [
     description: "SKARET SQUARE RISER 6 X6 X24.5'' SS",
     finish: "Mirror Polish",
     categorySlug: "risers",
-    imageUrl: "/images/risers/SR060624SS.jpg"
+    imageUrl: "https://i.postimg.cc/fLKmQcM2/SR06024-SS.jpg
   },
   {
     id: "SR060612SS",
