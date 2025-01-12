@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useRoute, Link } from "wouter";
 import { categories, products } from "@/lib/data";
 import { Button } from "@/components/ui/button";
@@ -5,9 +6,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ChevronLeft } from "lucide-react";
+import { ImageViewer } from "@/components/ImageViewer";
 
 export default function CategoryPage() {
   const [, params] = useRoute("/category/:slug");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const category = categories.find(cat => cat.slug === params?.slug);
   const categoryProducts = products.filter(product => product.categorySlug === params?.slug);
@@ -51,7 +54,8 @@ export default function CategoryPage() {
                 <img
                   src={product.imageUrl}
                   alt={product.description}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full cursor-pointer transition-transform hover:scale-105"
+                  onClick={() => setSelectedImage(product.imageUrl)}
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
                     img.src = "/images/placeholder.jpg";
@@ -77,6 +81,13 @@ export default function CategoryPage() {
           </p>
         </div>
       )}
+
+      <ImageViewer
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageUrl={selectedImage || ""}
+        alt="Product full size view"
+      />
     </div>
   );
 }
