@@ -209,7 +209,7 @@ export const products: Product[] = [
     description: "CEREAL DISPENSER REVOLVING 3 STATIONS SS",
     finish: "MIRROR POLISH STAINLESS STEEL",
     categorySlug: "cereal-range",
-    imageUrl: "/images/cereal-range/cd-rev-3.jpg",
+    imageUrl: "https://i.postimg.cc/76QYpckK/3-CDRV3-S35-SS.jpg",
     features: [
       "REVOLVING CEREAL DISPENSER",
       "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 3 )",
@@ -226,7 +226,7 @@ export const products: Product[] = [
     description: "CEREAL DISPENSER 2 STATIONS SS",
     finish: "MIRROR POLISH STAINLESS STEEL",
     categorySlug: "cereal-range",
-    imageUrl: "/images/cereal-range/cd-2s.jpg",
+    imageUrl: "https://i.postimg.cc/xjhLmpzG/3-CD2-S35-SS.jpg",
     features: [
       "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 2 )",
       "FREE & EASY POURING OF PORTIONS",
@@ -242,7 +242,7 @@ export const products: Product[] = [
     description: "CEREAL DISPENSER 3 STATIONS SS",
     finish: "MIRROR POLISH STAINLESS STEEL",
     categorySlug: "cereal-range",
-    imageUrl: "/images/cereal-range/cd-3s.jpg",
+    imageUrl: "https://i.postimg.cc/Bvb5WjPs/3-CD3-S35-SS.jpg",
     features: [
       "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 3 )",
       "FREE & EASY POURING OF PORTIONS",
@@ -258,7 +258,7 @@ export const products: Product[] = [
     description: "CEREAL DISPENSER 4 STATIONS SS",
     finish: "MIRROR POLISH STAINLESS STEEL",
     categorySlug: "cereal-range",
-    imageUrl: "/images/cereal-range/cd-4s.jpg",
+    imageUrl: "https://i.postimg.cc/yxy33K3v/3-CD4-S35-SS.jpg",
     features: [
       "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 4 )",
       "FREE & EASY POURING OF PORTIONS",
@@ -274,7 +274,7 @@ export const products: Product[] = [
     description: "JUICE DISPENSER 7 QT SS",
     finish: "MIRROR POLISH STAINLESS STEEL",
     categorySlug: "cereal-range",
-    imageUrl: "/images/cereal-range/jd-7qt.jpg",
+    imageUrl: "https://i.postimg.cc/CLtSCtCN/3JD7QTSS.jpg",
     features: ["Many Features"]
   }
 ];
