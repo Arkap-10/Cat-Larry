@@ -218,8 +218,8 @@ export const products: Product[] = [
       "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
       "OVER ALL PRODUCT DIMENSIONS: 38 X 36 X 69 CM",
       "POLYCARBONATE CONTAINER DIMENSION :12 X 12 X 38 CM",
-      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
-    ]
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER",
+    ],
   },
   {
     id: "CD-2S",
@@ -234,8 +234,8 @@ export const products: Product[] = [
       "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
       "OVER ALL PRODUCT DIMENSIONS: 38 X 36 X 69 CM",
       "POLYCARBONATE CONTAINER DIMENSION : 12 X 12 X 38 CM",
-      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
-    ]
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER",
+    ],
   },
   {
     id: "CD-3S",
@@ -250,8 +250,8 @@ export const products: Product[] = [
       "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
       "OVER ALL PRODUCT DIMENSIONS : 48 X 31 X 69 CM",
       "POLYCARBONATE CONTAINER DIMENSION : 12 X 12 X 38 CM",
-      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
-    ]
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER",
+    ],
   },
   {
     id: "CD-4S",
@@ -266,8 +266,8 @@ export const products: Product[] = [
       "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
       "OVER ALL PRODUCT DIMENSIONS:  68 X 32 X 69 CM",
       "POLYCARBONATE CONTAINER DIMENSION : 12 X 12 X 38 CM",
-      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
-    ]
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER",
+    ],
   },
   {
     id: "JD-7QT",
@@ -275,6 +275,6 @@ export const products: Product[] = [
     finish: "MIRROR POLISH STAINLESS STEEL",
     categorySlug: "cereal-range",
     imageUrl: "https://i.postimg.cc/CLtSCtCN/3JD7QTSS.jpg",
-    features: ["Many Features"]
-  }
+    features: ["Many Features"],
+  },
 ];
