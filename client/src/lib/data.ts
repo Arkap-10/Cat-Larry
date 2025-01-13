@@ -333,4 +333,34 @@ export const products: Product[] = [
     categorySlug: "goose-holloware",
     imageUrl: "https://i.postimg.cc/GmBL1125/51SB08SS.jpg"
   },
+  {
+    id: "HM-6QT",
+    description: "6 QT ROUND FULL GLASS COVER HINGE MARMITE SS",
+    finish: "SS MIRROR POLISH",
+    categorySlug: "hinge-marmite",
+    imageUrl: "/images/hinge-marmite/hm-6qt.jpg",
+    features: [
+      "FULL GLASS COVER",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "BALANCED HINGE MECHANIZM WHICH ENABLES",
+      "SMOOTH OPENING / CLOSING OF THE COVER &",
+      "THE COVER STOPS AT ANY POSITION WHERE EVER LEFT",
+      "CAPACITY  6 QT"
+    ]
+  },
+  {
+    id: "HM-11QT",
+    description: "11 QT ROUND FULL GLASS COVER HINGE MARMITE SS",
+    finish: "SS MIRROR POLISH",
+    categorySlug: "hinge-marmite",
+    imageUrl: "/images/hinge-marmite/hm-11qt.jpg",
+    features: [
+      "FULL GLASS COVER",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "BALANCED HINGE MECHANIZM WHICH ENABLES",
+      "SMOOTH OPENING / CLOSING OF THE COVER &",
+      "THE COVER STOPS AT ANY POSITION WHERE EVER LEFT",
+      "CAPACITY  11  QT"
+    ]
+  }
 ];
