@@ -362,5 +362,75 @@ export const products: Product[] = [
       "THE COVER STOPS AT ANY POSITION WHERE EVER LEFT",
       "CAPACITY  11  QT"
     ]
+  },
+  {
+    id: "KCP-64-SS",
+    description: "KING COFFEE POT 64 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/kcp-64-ss.jpg"
+  },
+  {
+    id: "KWP-64-SS",
+    description: "KING WATER PITCHER 64 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/kwp-64-ss.jpg"
+  },
+  {
+    id: "KTP-16-SS",
+    description: "KING TEA POT 16 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/ktp-16-ss.jpg"
+  },
+  {
+    id: "KSB-8-SS",
+    description: "KING SUGAR BOWL 8 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/ksb-8-ss.jpg"
+  },
+  {
+    id: "KC-8-SS",
+    description: "KING CREAMER 8 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/kc-8-ss.jpg"
+  },
+  {
+    id: "KCP-64-G",
+    description: "KING COFFEE POT 64 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/kcp-64-g.jpg"
+  },
+  {
+    id: "KWP-64-G",
+    description: "KING WATER PITCHER 64 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/kwp-64-g.jpg"
+  },
+  {
+    id: "KTP-16-G",
+    description: "KING TEA POT 16 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/ktp-16-g.jpg"
+  },
+  {
+    id: "KSB-8-G",
+    description: "KING SUGAR BOWL 8 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/ksb-8-g.jpg"
+  },
+  {
+    id: "KC-8-G",
+    description: "KING CREAMER 8 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "king-holloware",
+    imageUrl: "/images/king-holloware/kc-8-g.jpg"
   }
 ];
