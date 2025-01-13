@@ -338,7 +338,7 @@ export const products: Product[] = [
     description: "6 QT ROUND FULL GLASS COVER HINGE MARMITE SS",
     finish: "SS MIRROR POLISH",
     categorySlug: "hinge-marmite",
-    imageUrl: "/images/hinge-marmite/hm-6qt.jpg",
+    imageUrl: "https://i.postimg.cc/JzzjjxxL/1HMGC6QT.jpg",
     features: [
       "FULL GLASS COVER",
       "CONDENSATE CATCH RETRIEVAL SYSTEM",
@@ -353,7 +353,7 @@ export const products: Product[] = [
     description: "11 QT ROUND FULL GLASS COVER HINGE MARMITE SS",
     finish: "SS MIRROR POLISH",
     categorySlug: "hinge-marmite",
-    imageUrl: "/images/hinge-marmite/hm-11qt.jpg",
+    imageUrl: "https://i.postimg.cc/Yq9S3s5b/1-HMGC11-QT.jpg",
     features: [
       "FULL GLASS COVER",
       "CONDENSATE CATCH RETRIEVAL SYSTEM",
