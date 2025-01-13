@@ -282,55 +282,55 @@ export const products: Product[] = [
     description: "GOOSE WATER PITCHER 64 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-water-pitcher-gold.jpg"
+    imageUrl: "https://i.postimg.cc/ZqLGyfDS/51WP64PG.jpg"
   },
   {
     id: "GCP-64-G",
     description: "GOOSE COFFEE POT 64 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-coffee-pot-gold.jpg"
+    imageUrl: "https://i.postimg.cc/CM8WGL27/51CP64PG.jpg"
   },
   {
     id: "GC-8-G",
     description: "GOOSE CREAMER 8 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-creamer-gold.jpg"
+    imageUrl: "https://i.postimg.cc/vBYcWNYL/51CR08PG.jpg"
   },
   {
     id: "GSB-8-G",
     description: "GOOSE SUGAR BOWL 8 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-sugar-bowl-gold.jpg"
+    imageUrl: "https://i.postimg.cc/V62v3L94/51SB08PG.jpg"
   },
   {
     id: "GWP-64-SS",
     description: "GOOSE WATER PITCHER 64 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-water-pitcher-ss.jpg"
+    imageUrl: "https://i.postimg.cc/90t2JWLD/51WP64SS.jpg"
   },
   {
     id: "GCP-64-SS",
     description: "GOOSE COFFEE POT 64 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-coffee-pot-ss.jpg"
+    imageUrl: "https://i.postimg.cc/zGyMfzTT/51CP64SS.jpg"
   },
   {
     id: "GC-8-SS",
     description: "GOOSE CREAMER 8 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-creamer-ss.jpg"
+    imageUrl: "https://i.postimg.cc/66DzhrZ4/51CR08SS.jpg"
   },
   {
     id: "GSB-8-SS",
     description: "GOOSE SUGAR BOWL 8 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "goose-holloware",
-    imageUrl: "https://i.postimg.cc/placeholder-goose-sugar-bowl-ss.jpg"
+    imageUrl: "https://i.postimg.cc/GmBL1125/51SB08SS.jpg"
   },
 ];
