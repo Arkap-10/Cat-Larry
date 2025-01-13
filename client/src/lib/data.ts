@@ -277,4 +277,60 @@ export const products: Product[] = [
     imageUrl: "https://i.postimg.cc/CLtSCtCN/3JD7QTSS.jpg",
     features: ["Many Features"],
   },
+  {
+    id: "GWP-64-G",
+    description: "GOOSE WATER PITCHER 64 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-water-pitcher-gold.jpg"
+  },
+  {
+    id: "GCP-64-G",
+    description: "GOOSE COFFEE POT 64 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-coffee-pot-gold.jpg"
+  },
+  {
+    id: "GC-8-G",
+    description: "GOOSE CREAMER 8 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-creamer-gold.jpg"
+  },
+  {
+    id: "GSB-8-G",
+    description: "GOOSE SUGAR BOWL 8 OZ GOLD",
+    finish: "PVD GOLD",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-sugar-bowl-gold.jpg"
+  },
+  {
+    id: "GWP-64-SS",
+    description: "GOOSE WATER PITCHER 64 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-water-pitcher-ss.jpg"
+  },
+  {
+    id: "GCP-64-SS",
+    description: "GOOSE COFFEE POT 64 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-coffee-pot-ss.jpg"
+  },
+  {
+    id: "GC-8-SS",
+    description: "GOOSE CREAMER 8 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-creamer-ss.jpg"
+  },
+  {
+    id: "GSB-8-SS",
+    description: "GOOSE SUGAR BOWL 8 OZ SS",
+    finish: "MIRROR POLISH SS",
+    categorySlug: "goose-holloware",
+    imageUrl: "https://i.postimg.cc/placeholder-goose-sugar-bowl-ss.jpg"
+  },
 ];
