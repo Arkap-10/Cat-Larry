@@ -68,6 +68,16 @@ export default function CategoryPage() {
                   <Badge variant="secondary">{product.finish}</Badge>
                 </div>
                 <p className="text-sm text-muted-foreground">{product.description}</p>
+                {product.features && product.features.length > 0 && (
+                  <div className="mt-4">
+                    <h4 className="font-medium text-sm mb-2">Features:</h4>
+                    <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                      {product.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </CardContent>
           </Card>
