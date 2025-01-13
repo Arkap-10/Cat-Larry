@@ -11,6 +11,7 @@ export interface Product {
   finish: string;
   categorySlug: string;
   imageUrl: string;
+  features?: string[];
 }
 
 export const categories: Category[] = [
@@ -203,4 +204,77 @@ export const products: Product[] = [
     categorySlug: "risers",
     imageUrl: "https://i.postimg.cc/15QRq81B/DSST04.jpg",
   },
+  {
+    id: "CD-REV-3",
+    description: "CEREAL DISPENSER REVOLVING 3 STATIONS SS",
+    finish: "MIRROR POLISH STAINLESS STEEL",
+    categorySlug: "cereal-range",
+    imageUrl: "/images/cereal-range/cd-rev-3.jpg",
+    features: [
+      "REVOLVING CEREAL DISPENSER",
+      "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 3 )",
+      "FREE & EASY POURING OF PORTIONS",
+      "SUITABLE FOR CEREALS, RICE, WHEAT,CANDY, NUTS & MANY MORE",
+      "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
+      "OVER ALL PRODUCT DIMENSIONS: 38 X 36 X 69 CM",
+      "POLYCARBONATE CONTAINER DIMENSION :12 X 12 X 38 CM",
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
+    ]
+  },
+  {
+    id: "CD-2S",
+    description: "CEREAL DISPENSER 2 STATIONS SS",
+    finish: "MIRROR POLISH STAINLESS STEEL",
+    categorySlug: "cereal-range",
+    imageUrl: "/images/cereal-range/cd-2s.jpg",
+    features: [
+      "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 2 )",
+      "FREE & EASY POURING OF PORTIONS",
+      "SUITABLE FOR CEREALS, RICE, WHEAT,CANDY, NUTS & MANY MORE",
+      "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
+      "OVER ALL PRODUCT DIMENSIONS: 38 X 36 X 69 CM",
+      "POLYCARBONATE CONTAINER DIMENSION : 12 X 12 X 38 CM",
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
+    ]
+  },
+  {
+    id: "CD-3S",
+    description: "CEREAL DISPENSER 3 STATIONS SS",
+    finish: "MIRROR POLISH STAINLESS STEEL",
+    categorySlug: "cereal-range",
+    imageUrl: "/images/cereal-range/cd-3s.jpg",
+    features: [
+      "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 3 )",
+      "FREE & EASY POURING OF PORTIONS",
+      "SUITABLE FOR CEREALS, RICE, WHEAT,CANDY, NUTS & MANY MORE",
+      "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
+      "OVER ALL PRODUCT DIMENSIONS : 48 X 31 X 69 CM",
+      "POLYCARBONATE CONTAINER DIMENSION : 12 X 12 X 38 CM",
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
+    ]
+  },
+  {
+    id: "CD-4S",
+    description: "CEREAL DISPENSER 4 STATIONS SS",
+    finish: "MIRROR POLISH STAINLESS STEEL",
+    categorySlug: "cereal-range",
+    imageUrl: "/images/cereal-range/cd-4s.jpg",
+    features: [
+      "CAPACITY 3.5 LITERS EACH CONTAINER ( 3.5 L X 4 )",
+      "FREE & EASY POURING OF PORTIONS",
+      "SUITABLE FOR CEREALS, RICE, WHEAT,CANDY, NUTS & MANY MORE",
+      "MATERIALS : STAINLESS STEEL BASE / COVER & POLYCARBONATE CONTAINER",
+      "OVER ALL PRODUCT DIMENSIONS:  68 X 32 X 69 CM",
+      "POLYCARBONATE CONTAINER DIMENSION : 12 X 12 X 38 CM",
+      "SPARE PARTS ARE AVAILABLE FOR THIS DISPENSER"
+    ]
+  },
+  {
+    id: "JD-7QT",
+    description: "JUICE DISPENSER 7 QT SS",
+    finish: "MIRROR POLISH STAINLESS STEEL",
+    categorySlug: "cereal-range",
+    imageUrl: "/images/cereal-range/jd-7qt.jpg",
+    features: ["Many Features"]
+  }
 ];
