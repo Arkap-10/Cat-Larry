@@ -368,69 +368,69 @@ export const products: Product[] = [
     description: "KING COFFEE POT 64 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/kcp-64-ss.jpg"
+    imageUrl: "https://i.postimg.cc/XqNxQFKT/52CP64SS.jpg"
   },
   {
     id: "KWP-64-SS",
     description: "KING WATER PITCHER 64 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/kwp-64-ss.jpg"
+    imageUrl: "https://i.postimg.cc/Qdc5KC15/52WP64SS.jpg"
   },
   {
     id: "KTP-16-SS",
     description: "KING TEA POT 16 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/ktp-16-ss.jpg"
+    imageUrl: "https://i.postimg.cc/8sQcTdyY/52TP16SS.jpg"
   },
   {
     id: "KSB-8-SS",
     description: "KING SUGAR BOWL 8 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/ksb-8-ss.jpg"
+    imageUrl: "https://i.postimg.cc/JhWFjsgW/52SB08SS.jpg"
   },
   {
     id: "KC-8-SS",
     description: "KING CREAMER 8 OZ SS",
     finish: "MIRROR POLISH SS",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/kc-8-ss.jpg"
+    imageUrl: "https://i.postimg.cc/bvJmx1TW/52CR08SS.jpg"
   },
   {
     id: "KCP-64-G",
     description: "KING COFFEE POT 64 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/kcp-64-g.jpg"
+    imageUrl: "https://i.postimg.cc/nLDDfzcM/52CP64PG.jpg"
   },
   {
     id: "KWP-64-G",
     description: "KING WATER PITCHER 64 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/kwp-64-g.jpg"
+    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg"
   },
   {
     id: "KTP-16-G",
     description: "KING TEA POT 16 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/ktp-16-g.jpg"
+    imageUrl: "https://i.postimg.cc/v8LSd8cP/52TP16PG.jpg"
   },
   {
     id: "KSB-8-G",
     description: "KING SUGAR BOWL 8 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/ksb-8-g.jpg"
+    imageUrl: "https://i.postimg.cc/K4hZLGhp/52SB08PG.jpg"
   },
   {
     id: "KC-8-G",
     description: "KING CREAMER 8 OZ GOLD",
     finish: "PVD GOLD",
     categorySlug: "king-holloware",
-    imageUrl: "/images/king-holloware/kc-8-g.jpg"
+    imageUrl: "https://i.postimg.cc/NFDcy1bF/52CR08PG.jpg"
   }
 ];
