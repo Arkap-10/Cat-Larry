@@ -615,5 +615,37 @@ export const products: Product[] = [
       "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
       "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
     ]
+  },
+  {
+    id: "1L0PPGTW2Q",
+    name: "2 QT Round Gold White Teflon Lift Off Induction / Grill Chafer",
+    description: "2 QT ROUND GOLD WHITE TEFLON LIFT OFF INDUCTION / GRILL CHAFER",
+    price: "299.99",
+    categorySlug: "premium-2qt-chafer",
+    imageUrl: "/images/placeholder.jpg",
+    finish: "KNOB, SIDE HANDLES PVD GOLD & \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "SIZES AVAILABLE 2 QT, 4QT, 6 QT & 4.5 QT OVAL CAPACITY",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
+  },
+  {
+    id: "1L0PFRPGTW2Q",
+    name: "2 QT Round Gold White Teflon Lift Off with Fry Handle Induction / Grill Chafer",
+    description: "2 QT ROUND GOLD WHITE TEFLON LIFT OFF INDUCTION / GRILL CHAFER",
+    price: "329.99",
+    categorySlug: "premium-2qt-chafer",
+    imageUrl: "/images/placeholder.jpg",
+    finish: "KNOB, SIDE HANDLES PVD GOLD & \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "SIZES AVAILABLE 2 QT, 4QT, 6 QT & 45 QT OVAL CAPACITY",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
   }
 ];
