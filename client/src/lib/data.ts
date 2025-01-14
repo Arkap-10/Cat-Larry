@@ -567,5 +567,53 @@ export const products: Product[] = [
       "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
       "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
     ]
+  },
+  {
+    id: "1L0PFRPGTB2Q",
+    name: "2 QT Round PVD Gold Lift Off with Fry Handle, Induction/Grill Chafer",
+    description: "2 QT ROUND PVD GOLD LIFT OFF WITH FRY HANDLE, INDUCTION/GRILL CHAFER",
+    price: "329.99",
+    categorySlug: "premium-2qt-chafer",
+    imageUrl: "/images/placeholder.jpg",
+    finish: "KNOB, FRY HANDLE, SIDE HANDLE PVD GOLD\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "SIZES AVAILABLE 2 QT, 4QT, 6 QT & 4.5 QT OVAL CAPACITY",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
+  },
+  {
+    id: "1L0PPGTB2Q-SS",
+    name: "2 QT Round Lift Off Induction / Grill Chafer SS",
+    description: "2 QT ROUND LIFT OFF INDUCTION / GRILL CHAFER SS",
+    price: "279.99",
+    categorySlug: "premium-2qt-chafer",
+    imageUrl: "/images/placeholder.jpg",
+    finish: "MIRROR POLISH SS",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "SIZES AVAILABLE 2 QT, 4QT, 6 QT & 4.5 QT OVAL CAPACITY",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
+  },
+  {
+    id: "1L0PFRMP2QSS",
+    name: "2 QT Round Lift Off Fry Handle Induction / Grill Chafer SS",
+    description: "2 QT ROUND LIFT OFF FRY HANDLE INDUCTION / GRILL CHAFER SS",
+    price: "299.99",
+    categorySlug: "premium-2qt-chafer",
+    imageUrl: "/images/placeholder.jpg",
+    finish: "MIRROR POLISH SS",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "SIZES AVAILABLE 2 QT, 4QT, 6 QT & 4.5 QT OVAL CAPACITY",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
   }
 ];
