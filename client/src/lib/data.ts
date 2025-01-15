@@ -1052,5 +1052,86 @@ export const products: Product[] = [
     categorySlug: "teflon-servers",
     imageUrl: "https://i.postimg.cc/j2JLx1FY/1-L0-PFRPGTW4-Q.jpg",
     features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7RDBLWTALS3",
+    name: "ROUND BOWL SET OF 3 PCS",
+    description: "ROUND BOWL SET OF 3 PCS\nSizes:\n- 19.5 X 19.5 X 7 CM\n- 23 X 23 X 8 CM\n- 25 X 25 X 8 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7TRRTWTALS4",
+    name: "PLATTER OVAL SET OF 4 PCS",
+    description: "PLATTER OVAL SET OF 4 PCS\nSizes:\n- 24 X 16 X 1.5 CM\n- 31.5 X 24 X 1.5 CM\n- 42.5 X 31 X 2 CM\n- 61.5 X 48.5 X 3",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7FPWTALS3",
+    name: "FOOD PAN SET OF 3",
+    description: "FOOD PAN SET OF 3\nSizes:\n- 23.5 X 23.5 X 7 CM\n- 30.5 X 30.5 X 7 CM\n- 38.5 X 38.5 X 8 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7OVBLWTALS2",
+    name: "BOWL OVAL SET OF 2 PCS",
+    description: "BOWL OVAL SET OF 2 PCS\nSizes:\n- 32 X 23.5 X 6 CM\n- 34 X 24.5 X 6 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7OVBTWTAL",
+    name: "BOWL OVAL SET",
+    description: "BOWL OVAL SET\nSize: 24.5 X 14 X 9 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/8kd1kXrd/1-L0-PFRPGTW2-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7RTFPWTALS2",
+    name: "RECT FOOD PAN SET OF 2 PCS",
+    description: "RECT FOOD PAN SET OF 2 PCS\nSizes:\n- 33.5 X 27.5 X 6.5 CM\n- 37 X 34 X 6.5 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7OVBLWTAL",
+    name: "BOWL OVAL",
+    description: "BOWL OVAL\nSize: 30 X 29 X 12 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/j2JLx1FY/1-L0-PFRPGTW4-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7PGBLWTAL",
+    name: "PARALLEL BOWL",
+    description: "PARALLEL BOWL\nSize: 25 X 18 X 4 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7RTTRWTAL",
+    name: "TRAY RECTANGULAR",
+    description: "TRAY RECTANGULAR\nSize: 32.5 X 15.5 X 2 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    features: ["NON BREAKABLE"]
   }
 ];
