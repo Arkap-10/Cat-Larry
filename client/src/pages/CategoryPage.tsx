@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ChevronLeft } from "lucide-react";
 import { ImageViewer } from "@/components/ImageViewer";
+import ProductCarousel from "@/components/ProductCarousel";
 
 export default function CategoryPage() {
   const [, params] = useRoute("/category/:slug");
@@ -45,6 +46,13 @@ export default function CategoryPage() {
           <p className="text-muted-foreground">{category.description}</p>
         )}
       </div>
+
+      {category.slug === "roll-top-chafers" && (
+        <ProductCarousel 
+          products={categoryProducts} 
+          className="mb-8"
+        />
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {categoryProducts.map((product) => (
