@@ -996,7 +996,7 @@ export const products: Product[] = [
     description: "PLATTER TRIANGULAR SET OF 4 PCS\nSizes:\n- 15.5 X 15.5 X 1.5 CM\n- 21.5 X 21.5 X 2.5 CM\n- 26 X 26 X 3 CM\n- 29.5 X 29.5 X 3 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/nLqqmFrT/7-TRWTALS4.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1005,7 +1005,7 @@ export const products: Product[] = [
     description: "PLATTER OVAL SET OF 3 PCS\nSizes:\n- 21 X 13 X 2 CM\n- 26.5 X 16 X 2.5 CM\n- 30 X 18.5 X 2.5 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/nzzcJ2y7/7-OVWTALS3.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1014,7 +1014,7 @@ export const products: Product[] = [
     description: "PLATTER RECTANGULAR SET OF 5 PCS\nSizes:\n- 22.5 X 9 X 1.5 CM\n- 24.5 X 10 X 2 CM\n- 27.5 X 11.5 X 2.5 CM\n- 29.5 X 12.5 X 2.5 CM\n- 31 X 13.5 X 2.5 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/Jzz1JPhF/7-RTWTALS5.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1023,7 +1023,7 @@ export const products: Product[] = [
     description: "TRAY ROUND SET OF 5 PCS\nSizes:\n- 21 X 21 X 2 CM\n- 30.5 X 30.5 X 2 CM\n- 35.5 X 35.5 X 2 CM\n- 40.5 X 40.5 X 2 CM\n- 51 X 51 X 2 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    imageUrl: "https://i.postimg.cc/cLgbVnkH/7-RDWTALS5.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1032,7 +1032,7 @@ export const products: Product[] = [
     description: "TRAY OVAL SET OF 2 PCS\nSizes:\n- 51 X 35.5 X 2.5 CM\n- 60 X 17.5 X 2.5 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/8kd1kXrd/1-L0-PFRPGTW2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/QtxkrLNb/7-OVWTALS2.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1041,7 +1041,7 @@ export const products: Product[] = [
     description: "PLATTER OVAL SET OF 4 PCS\nSizes:\n- 14.5 X 14.5 X 2\n- 19.5 X 19.5 X 2.5 CM\n- 25 X 25 X 2.5 CM\n- 30 X 30 X 3 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/NMHTtgqR/7-SQWTALS4.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1050,7 +1050,7 @@ export const products: Product[] = [
     description: "SQUARE BOWL SET OF 3 PCS\nSizes:\n- 20 X 20 X 6 CM\n- 22.5 X 22.5 X 7 CM\n- 25 X 25 X 8.5 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/j2JLx1FY/1-L0-PFRPGTW4-Q.jpg",
+    imageUrl: "https://i.postimg.cc/kg3HP50v/7-SQBLWTALS3.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1059,7 +1059,7 @@ export const products: Product[] = [
     description: "ROUND BOWL SET OF 3 PCS\nSizes:\n- 19.5 X 19.5 X 7 CM\n- 23 X 23 X 8 CM\n- 25 X 25 X 8 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/Ss25pzxV/7-RDBLWTALS3.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1068,7 +1068,7 @@ export const products: Product[] = [
     description: "PLATTER OVAL SET OF 4 PCS\nSizes:\n- 24 X 16 X 1.5 CM\n- 31.5 X 24 X 1.5 CM\n- 42.5 X 31 X 2 CM\n- 61.5 X 48.5 X 3",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/KvF90WB0/7-TRRTWTALS4.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1077,7 +1077,7 @@ export const products: Product[] = [
     description: "FOOD PAN SET OF 3\nSizes:\n- 23.5 X 23.5 X 7 CM\n- 30.5 X 30.5 X 7 CM\n- 38.5 X 38.5 X 8 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/wTTXyYhY/7-FPWTALS3.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1086,7 +1086,7 @@ export const products: Product[] = [
     description: "BOWL OVAL SET OF 2 PCS\nSizes:\n- 32 X 23.5 X 6 CM\n- 34 X 24.5 X 6 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    imageUrl: "https://i.postimg.cc/fbjyfJN2/7-OVBLWTALS2.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1095,7 +1095,7 @@ export const products: Product[] = [
     description: "BOWL OVAL SET\nSize: 24.5 X 14 X 9 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/8kd1kXrd/1-L0-PFRPGTW2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/NMKMqbXV/7-OVBTWTAL.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1104,7 +1104,7 @@ export const products: Product[] = [
     description: "RECT FOOD PAN SET OF 2 PCS\nSizes:\n- 33.5 X 27.5 X 6.5 CM\n- 37 X 34 X 6.5 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/5tFGhC0g/7-RTFPWTALS2.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1113,7 +1113,7 @@ export const products: Product[] = [
     description: "BOWL OVAL\nSize: 30 X 29 X 12 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/j2JLx1FY/1-L0-PFRPGTW4-Q.jpg",
+    imageUrl: "https://i.postimg.cc/8cFr4Nw7/7-OVBLWTAL.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1122,7 +1122,7 @@ export const products: Product[] = [
     description: "PARALLEL BOWL\nSize: 25 X 18 X 4 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/13MwyCg5/7-PGBLWTAL.jpg",
     features: ["NON BREAKABLE"]
   },
   {
@@ -1131,7 +1131,7 @@ export const products: Product[] = [
     description: "TRAY RECTANGULAR\nSize: 32.5 X 15.5 X 2 CM",
     price: "",
     categorySlug: "teflon-servers",
-    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/KvF90WB0/7-TRRTWTALS4.jpg",
     features: ["NON BREAKABLE"]
   }
 ];
