@@ -855,5 +855,37 @@ export const products: Product[] = [
       "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
       "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
     ]
+  },
+  {
+    id: "1LVPPGTW45Q",
+    name: "4.5 QT Oval Lift Off PVD Gold Induction / Grill Chafer",
+    description: "4.5 QT OVAL LIFT OFF PVD GOLD INDUCTION / GRILL CHAFER",
+    price: "",
+    categorySlug: "premium-45qt-oval-chafer",
+    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    finish: "KNOB, SIDE HANDLE PVD GOLD \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "CAPACITY 4.5 QT OVAL",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
+  },
+  {
+    id: "1LVPFRPGTW45Q",
+    name: "4.5 QT Oval Lift Off Fry Handle PVD Gold Induction / Grill Chafer",
+    description: "4.5 QT OVAL LIFT OFF FRY HANDLE PVD GOLD INDUCTION / GRILL CHAFER",
+    price: "",
+    categorySlug: "premium-45qt-oval-chafer",
+    imageUrl: "https://i.postimg.cc/8kd1kXrd/1-L0-PFRPGTW2-Q.jpg",
+    finish: "KNOB, SIDE HANDLE PVD GOLD \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "CAPACITY 4.5 QT OVAL",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
   }
 ];
