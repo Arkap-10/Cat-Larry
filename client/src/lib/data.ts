@@ -894,7 +894,7 @@ export const products: Product[] = [
     description: "2 GAL BALANCED ROLL TOP CHAFER PVD GOLD",
     price: "",
     categorySlug: "roll-top-chafers",
-    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    imageUrl: "https://i.postimg.cc/fy33cqFv/1-R0-PGTB02-SIDE-VIEW.jpg",
     finish: "COVER PVD GOLD & TEFLON COATED BLACK STAND\nMIRROR POLISH SS INSIDE COVE, FOOD PAN & WATER PAN",
     features: [
       "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
@@ -911,7 +911,7 @@ export const products: Product[] = [
     description: "2 GAL ROUND BALANCED ROLL TOP CHAFER SS",
     price: "",
     categorySlug: "roll-top-chafers",
-    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/PrQLmDV9/1-R0-MPTB02-SIDE-VIEW-HALF-OPEN-COVER.jpg",
     finish: "COVER MIRROR POLISH & TEFLON COATED BLACK STAND",
     features: [
       "BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
@@ -928,7 +928,7 @@ export const products: Product[] = [
     description: "2 GAL ROUND ROLL TOP BALANCED CHAFER SS",
     price: "",
     categorySlug: "roll-top-chafers",
-    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/VLq7n78w/1-R0-MP02-SS-HALF-OPEN-COVER.jpg",
     finish: "MIRROR POLISH SS",
     features: [
       "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
@@ -945,7 +945,7 @@ export const products: Product[] = [
     description: "8 QT RECTANGULAR ROLL TOP BALANCED PVD GOLD CHAFER",
     price: "",
     categorySlug: "roll-top-chafers",
-    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    imageUrl: "https://i.postimg.cc/DynNjV50/1-RRPGTB08-SIDE-VIEW.jpg",
     finish: "COVER PVD GOLD & TEFLON COATED BLACK STAND\nMIRROR POLISH FOOD PAN /WATER PAN & NSIDE OF COVER IS MIRROR POLISH SS\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
@@ -962,7 +962,7 @@ export const products: Product[] = [
     description: "8 QT RECTANGULAR ROLL TOP BALANCED CHAFER SS",
     price: "",
     categorySlug: "roll-top-chafers",
-    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/hGtzpGQs/MG-8929.jpg",
     finish: "MIRROR POLISH SS\nBLACK TEFLON STAND",
     features: [
       "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
@@ -979,7 +979,7 @@ export const products: Product[] = [
     description: "8 QT RECTANGULAR ROLL TOP BALANCED CHAFER SS",
     price: "",
     categorySlug: "roll-top-chafers",
-    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/7YPkCJFK/1-R4-MP08-SS-SIDE-VIEW.jpg",
     finish: "MIRROR POLISH SS",
     features: [
       "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
