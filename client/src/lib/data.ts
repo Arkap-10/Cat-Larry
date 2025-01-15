@@ -887,5 +887,56 @@ export const products: Product[] = [
       "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
       "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
     ]
+  },
+  {
+    id: "1R0PGTB02",
+    name: "2 GAL BALANCED ROLL TOP CHAFER PVD GOLD",
+    description: "2 GAL BALANCED ROLL TOP CHAFER PVD GOLD",
+    price: "",
+    categorySlug: "roll-top-chafers",
+    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    finish: "COVER PVD GOLD & TEFLON COATED BLACK STAND\nMIRROR POLISH SS INSIDE COVE, FOOD PAN & WATER PAN",
+    features: [
+      "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
+      "COVER ROLLS DOWN AT FULL OPEN POSITION",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "STACKABLE FRAMES",
+      "2 GAL CAPACITY",
+      "FOOD PAN INCLUDED"
+    ]
+  },
+  {
+    id: "1R0MPTB02",
+    name: "2 GAL ROUND BALANCED ROLL TOP CHAFER SS",
+    description: "2 GAL ROUND BALANCED ROLL TOP CHAFER SS",
+    price: "",
+    categorySlug: "roll-top-chafers",
+    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    finish: "COVER MIRROR POLISH & TEFLON COATED BLACK STAND",
+    features: [
+      "BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
+      "COVER ROLLS DOWN AT FULL OPEN POSITION",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "STACKABLE FRAMES",
+      "2 GAL CAPACITY",
+      "FOOD PAN INCLUDED"
+    ]
+  },
+  {
+    id: "1R0MP02SS",
+    name: "2 GAL ROUND ROLL TOP BALANCED CHAFER SS",
+    description: "2 GAL ROUND ROLL TOP BALANCED CHAFER SS",
+    price: "",
+    categorySlug: "roll-top-chafers",
+    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    finish: "MIRROR POLISH SS",
+    features: [
+      "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
+      "COVER ROLLS DOWN AT FULL OPEN POSITION",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "STACKABLE FRAMES",
+      "2 GAL CAPACITY",
+      "FOOD PAN INCLUDED"
+    ]
   }
 ];
