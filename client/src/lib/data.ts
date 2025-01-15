@@ -938,5 +938,56 @@ export const products: Product[] = [
       "2 GAL CAPACITY",
       "FOOD PAN INCLUDED"
     ]
+  },
+  {
+    id: "1R4PGTB08",
+    name: "8 QT RECTANGULAR ROLL TOP BALANCED PVD GOLD CHAFER",
+    description: "8 QT RECTANGULAR ROLL TOP BALANCED PVD GOLD CHAFER",
+    price: "",
+    categorySlug: "roll-top-chafers",
+    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    finish: "COVER PVD GOLD & TEFLON COATED BLACK STAND\nMIRROR POLISH FOOD PAN /WATER PAN & NSIDE OF COVER IS MIRROR POLISH SS\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
+      "COVER ROLLS DOWN AT FULL OPEN POSITION",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "STACKABLE FRAMES",
+      "8 QT CAPACITY",
+      "FOOD PAN INCLUDED"
+    ]
+  },
+  {
+    id: "1R4MPTB08SS",
+    name: "8 QT RECTANGULAR ROLL TOP BALANCED CHAFER SS",
+    description: "8 QT RECTANGULAR ROLL TOP BALANCED CHAFER SS",
+    price: "",
+    categorySlug: "roll-top-chafers",
+    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    finish: "MIRROR POLISH SS\nBLACK TEFLON STAND",
+    features: [
+      "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
+      "COVER ROLLS DOWN AT FULL OPEN POSITION",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "STACKABLE FRAMES",
+      "8 QT CAPACITY",
+      "FOOD PAN INCLUDED"
+    ]
+  },
+  {
+    id: "1R4MP08SS",
+    name: "8 QT RECTANGULAR ROLL TOP BALANCED CHAFER SS",
+    description: "8 QT RECTANGULAR ROLL TOP BALANCED CHAFER SS",
+    price: "",
+    categorySlug: "roll-top-chafers",
+    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    finish: "MIRROR POLISH SS",
+    features: [
+      "ROLL TOP BALANCED COVER MECHANIZM WHICH STOPS AT ANY POINT WHEREVER LEFT",
+      "COVER ROLLS DOWN AT FULL OPEN POSITION",
+      "CONDENSATE CATCH RETRIEVAL SYSTEM",
+      "STACKABLE FRAMES",
+      "2 GAL CAPACITY",
+      "FOOD PAN INCLUDED"
+    ]
   }
 ];
