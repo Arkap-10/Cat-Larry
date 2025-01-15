@@ -989,5 +989,68 @@ export const products: Product[] = [
       "2 GAL CAPACITY",
       "FOOD PAN INCLUDED"
     ]
+  },
+  {
+    id: "7TRWTALS4",
+    name: "PLATTER TRIANGULAR SET OF 4 PCS",
+    description: "PLATTER TRIANGULAR SET OF 4 PCS\nSizes:\n- 15.5 X 15.5 X 1.5 CM\n- 21.5 X 21.5 X 2.5 CM\n- 26 X 26 X 3 CM\n- 29.5 X 29.5 X 3 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7OVWTALS3",
+    name: "PLATTER OVAL SET OF 3 PCS",
+    description: "PLATTER OVAL SET OF 3 PCS\nSizes:\n- 21 X 13 X 2 CM\n- 26.5 X 16 X 2.5 CM\n- 30 X 18.5 X 2.5 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7RTWTALS5",
+    name: "PLATTER RECTANGULAR SET OF 5 PCS",
+    description: "PLATTER RECTANGULAR SET OF 5 PCS\nSizes:\n- 22.5 X 9 X 1.5 CM\n- 24.5 X 10 X 2 CM\n- 27.5 X 11.5 X 2.5 CM\n- 29.5 X 12.5 X 2.5 CM\n- 31 X 13.5 X 2.5 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7RDWTALS5",
+    name: "TRAY ROUND SET OF 5 PCS",
+    description: "TRAY ROUND SET OF 5 PCS\nSizes:\n- 21 X 21 X 2 CM\n- 30.5 X 30.5 X 2 CM\n- 35.5 X 35.5 X 2 CM\n- 40.5 X 40.5 X 2 CM\n- 51 X 51 X 2 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7OVWTALS2",
+    name: "TRAY OVAL SET OF 2 PCS",
+    description: "TRAY OVAL SET OF 2 PCS\nSizes:\n- 51 X 35.5 X 2.5 CM\n- 60 X 17.5 X 2.5 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/8kd1kXrd/1-L0-PFRPGTW2-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7SQWTALS4",
+    name: "PLATTER OVAL SET OF 4 PCS",
+    description: "PLATTER OVAL SET OF 4 PCS\nSizes:\n- 14.5 X 14.5 X 2\n- 19.5 X 19.5 X 2.5 CM\n- 25 X 25 X 2.5 CM\n- 30 X 30 X 3 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
+    features: ["NON BREAKABLE"]
+  },
+  {
+    id: "7SQBLWTALS3",
+    name: "SQUARE BOWL SET OF 3 PCS",
+    description: "SQUARE BOWL SET OF 3 PCS\nSizes:\n- 20 X 20 X 6 CM\n- 22.5 X 22.5 X 7 CM\n- 25 X 25 X 8.5 CM",
+    price: "",
+    categorySlug: "teflon-servers",
+    imageUrl: "https://i.postimg.cc/j2JLx1FY/1-L0-PFRPGTW4-Q.jpg",
+    features: ["NON BREAKABLE"]
   }
 ];
