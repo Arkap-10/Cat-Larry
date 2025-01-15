@@ -759,5 +759,53 @@ export const products: Product[] = [
       "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
       "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
     ]
+  },
+  {
+    id: "1LVPPGTB45Q",
+    name: "4.5 QT Oval Lift Off PVD Gold Induction / Grill Chafer",
+    description: "4.5 QT OVAL LIFT OFF PVD GOLD INDUCTION / GRILL CHAFER",
+    price: "",
+    categorySlug: "premium-45qt-oval-chafer",
+    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    finish: "KNOB, SIDE HANDLE PVD GOLD\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "CAPACITY 4.5 QT OVAL",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
+  },
+  {
+    id: "1LVPFRPGTB45Q",
+    name: "4.5 QT Oval Lift Off Fry Handle PVD Gold Induction / Grill Chafer",
+    description: "4.5 QT OVAL LIFT OFF FRY HANDLE PVD GOLD INDUCTION / GRILL CHAFER",
+    price: "",
+    categorySlug: "premium-45qt-oval-chafer",
+    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
+    finish: "KNOB, SIDE HANDLE PVD GOLD\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "CAPACITY 4.5 QT OVAL",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
+  },
+  {
+    id: "1LVPPRTB45Q",
+    name: "4.5 QT Oval Rose Gold Lift Off PVD Rose Gold Induction / Grill Chafer",
+    description: "4.5 QT OVAL ROSE GOLD LIFT OFF PVD ROSE GOLD INDUCTION / GRILL CHAFER",
+    price: "",
+    categorySlug: "premium-45qt-oval-chafer",
+    imageUrl: "https://i.postimg.cc/j2mZN4Dz/1-L0-PPRTB2-Q.jpg",
+    finish: "KNOB, SIDE HANDLES PVD ROSE GOLD &\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
+    features: [
+      "CAN BE USED ON INDUCTION & GRILL",
+      "INCLUSSIVE WITH STANDARD FOOD PAN",
+      "CAPACITY 4.5 QT OVAL",
+      "AVAILABLE IN BLACK / WHITE TEFLON COATING & MIRROR POLISH SS",
+      "AVAILABLE IN GOLD / ROSE GOLD KNOB & SIDE HANDLES + MIRROR POLISH SS"
+    ]
   }
 ];
