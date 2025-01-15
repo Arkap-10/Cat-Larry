@@ -527,7 +527,7 @@ export const products: Product[] = [
     description: "2 QT ROUND ROSE GOLD LIFT OFF INDUCTION / GRILL CHAFER",
     price: "299.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/j2mZN4Dz/1-L0-PPRTB2-Q.jpg",
     finish: "KNOB, SIDE HANDLES PVD ROSE GOLD & WATER PAN & COVER BLACK TEXTURED TEFLON OUTER BODY MIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -543,7 +543,7 @@ export const products: Product[] = [
     description: "2 QT ROUND ROSE GOLD LIFT OFF WITH FRY HANDLE+ INDUCTION / GRILL CHAFER",
     price: "329.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
     finish: "KNOB, FRY HANDLE, SIDE HANDLE PVD ROSE GOLD WATER PAN & COVER BLACK TEXTURED TEFLON OUTER BODY MIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -558,7 +558,7 @@ export const products: Product[] = [
     description: "2 QT ROUND PVD GOLD LIFT OFF INDUCTION / GRILL CHAFER",
     price: "299.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/m2SKJ01q/1-L0-PPGTB2-Q.jpg",
     finish: "KNOB & SIDE HANDLES PVD GOLD WATER PAN & COVER BLACK TEXTURED TEFLON MIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -574,7 +574,7 @@ export const products: Product[] = [
     description: "2 QT ROUND PVD GOLD LIFT OFF WITH FRY HANDLE, INDUCTION/GRILL CHAFER",
     price: "329.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/j2tZhScj/1-L0-PFRPGTB2-Q.jpg",
     finish: "KNOB, FRY HANDLE, SIDE HANDLE PVD GOLD\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -590,7 +590,7 @@ export const products: Product[] = [
     description: "2 QT ROUND LIFT OFF INDUCTION / GRILL CHAFER SS",
     price: "279.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
     finish: "MIRROR POLISH SS",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -606,7 +606,7 @@ export const products: Product[] = [
     description: "2 QT ROUND LIFT OFF FRY HANDLE INDUCTION / GRILL CHAFER SS",
     price: "299.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
     finish: "MIRROR POLISH SS",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -622,7 +622,7 @@ export const products: Product[] = [
     description: "2 QT ROUND GOLD WHITE TEFLON LIFT OFF INDUCTION / GRILL CHAFER",
     price: "299.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
     finish: "KNOB, SIDE HANDLES PVD GOLD & \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -638,7 +638,7 @@ export const products: Product[] = [
     description: "2 QT ROUND GOLD WHITE TEFLON LIFT OFF INDUCTION / GRILL CHAFER",
     price: "329.99",
     categorySlug: "premium-2qt-chafer",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "https://i.postimg.cc/8kd1kXrd/1-L0-PFRPGTW2-Q.jpg",
     finish: "KNOB, SIDE HANDLES PVD GOLD & \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
