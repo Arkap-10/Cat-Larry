@@ -766,7 +766,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL LIFT OFF PVD GOLD INDUCTION / GRILL CHAFER",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/mrBsBpTM/52WP64PG.jpg",
+    imageUrl: "https://i.postimg.cc/L4ZhS3nK/1-LVPPGTB45-Q.jpg",
     finish: "KNOB, SIDE HANDLE PVD GOLD\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -782,7 +782,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL LIFT OFF FRY HANDLE PVD GOLD INDUCTION / GRILL CHAFER",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/CLS02G84/1-LVPFRPGTB45-Q.jpg",
     finish: "KNOB, SIDE HANDLE PVD GOLD\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -798,7 +798,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL ROSE GOLD LIFT OFF PVD ROSE GOLD INDUCTION / GRILL CHAFER",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/j2mZN4Dz/1-L0-PPRTB2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/Y9DFPrn6/1-LVPPRTB45-Q.jpg",
     finish: "KNOB, SIDE HANDLES PVD ROSE GOLD &\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -814,7 +814,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL LIFT OFF FRY HANDLE PVD ROSE GOLD INDUCTION / GRILL CHAFER",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/C5hzN3q0/1-L0-PFRPRTB2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/CLS02G84/1-LVPFRPGTB45-Q.jpg",
     finish: "KNOB, SIDE HANDLE PVD GOLD\nWATER PAN & COVER BLACK TEXTURED TEFLON\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -830,7 +830,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL LIFT OFF INDUCTION / GRILL CHAFER SS",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/zXPFyjsv/1-L0-PMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/VsB91wSc/1-LVPMP45-QSS.jpg",
     finish: "MIRROR POLISH SS",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -846,7 +846,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL LIFT OFF FRY HANDLE INDUCTION / GRILL CHAFER SS",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/15NfKrgf/1-L0-PFRMP2-QSS.jpg",
+    imageUrl: "https://i.postimg.cc/tgkrpR31/1-LVPFRMP45-QSS.jpg",
     finish: "MIRROR POLISH SS",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -862,7 +862,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL LIFT OFF PVD GOLD INDUCTION / GRILL CHAFER",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/7PJ2BkdH/1-L0-PPGTW2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/9QJ8jFtD/1-LVPPGTW45-Q.jpg",
     finish: "KNOB, SIDE HANDLE PVD GOLD \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
@@ -878,7 +878,7 @@ export const products: Product[] = [
     description: "4.5 QT OVAL LIFT OFF FRY HANDLE PVD GOLD INDUCTION / GRILL CHAFER",
     price: "",
     categorySlug: "premium-45qt-oval-chafer",
-    imageUrl: "https://i.postimg.cc/8kd1kXrd/1-L0-PFRPGTW2-Q.jpg",
+    imageUrl: "https://i.postimg.cc/BnXDXSfL/1-LVPFRPGTW45-Q.jpg",
     finish: "KNOB, SIDE HANDLE PVD GOLD \nWATER PAN & COVER WHITE TEXTURED TEFLON OUTER BODY\nMIRROR POLISH INSIDE WATER PAN, FOOD PAN & COVER",
     features: [
       "CAN BE USED ON INDUCTION & GRILL",
