@@ -67,7 +67,6 @@ export default function CategoryPage() {
                   <h3 className="font-medium text-lg">{product.description}</h3>
                   <Badge variant="secondary">{product.finish}</Badge>
                 </div>
-                <p className="text-sm text-muted-foreground">Item #{product.id}</p>
                 {product.features && product.features.length > 0 && (
                   <div className="mt-4">
                     <h4 className="font-medium text-sm mb-2">Features:</h4>

@@ -30,9 +30,6 @@ export default function ProductCard({ product }: ProductCardProps) {
             <h3 className="font-semibold text-lg tracking-tight">
               {product.description}
             </h3>
-            <p className="text-sm text-muted-foreground">
-              Item #{product.id}
-            </p>
           </div>
           <div className="mt-6">
             <p className="text-lg font-semibold text-primary">
