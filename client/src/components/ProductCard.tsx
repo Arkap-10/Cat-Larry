@@ -16,7 +16,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <AspectRatio ratio={1}>
           <img
             src={product.imageUrl}
-            alt={product.name}
+            alt={product.description}
             className="object-cover w-full h-full transition-all duration-300 group-hover:scale-105"
           />
           {product.featured && (
@@ -27,11 +27,11 @@ export default function ProductCard({ product }: ProductCardProps) {
         </AspectRatio>
         <div className="p-6">
           <div className="space-y-2">
-            <h3 className="font-semibold text-lg tracking-tight truncate">
-              {product.name}
-            </h3>
-            <p className="text-sm text-muted-foreground line-clamp-2">
+            <h3 className="font-semibold text-lg tracking-tight">
               {product.description}
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Item #{product.id}
             </p>
           </div>
           <div className="mt-6">

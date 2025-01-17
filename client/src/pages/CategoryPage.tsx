@@ -64,10 +64,10 @@ export default function CategoryPage() {
               </AspectRatio>
               <div className="space-y-2">
                 <div className="flex justify-between items-start">
-                  <h3 className="font-medium">{product.id}</h3>
+                  <h3 className="font-medium text-lg">{product.description}</h3>
                   <Badge variant="secondary">{product.finish}</Badge>
                 </div>
-                <p className="text-sm text-muted-foreground">{product.description}</p>
+                <p className="text-sm text-muted-foreground">Item #{product.id}</p>
                 {product.features && product.features.length > 0 && (
                   <div className="mt-4">
                     <h4 className="font-medium text-sm mb-2">Features:</h4>

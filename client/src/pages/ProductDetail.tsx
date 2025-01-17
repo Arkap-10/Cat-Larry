@@ -31,7 +31,7 @@ export default function ProductDetail() {
           <AspectRatio ratio={1}>
             <img
               src={product.imageUrl}
-              alt={product.name}
+              alt={product.description}
               className="object-cover w-full h-full rounded-lg"
             />
           </AspectRatio>
@@ -40,19 +40,18 @@ export default function ProductDetail() {
 
       <div className="space-y-6">
         <div>
-          <h1 className="text-3xl font-bold">{product.name}</h1>
-          <p className="text-2xl font-semibold text-primary mt-2">
+          <h1 className="text-3xl font-bold">{product.description}</h1>
+          <p className="text-sm text-muted-foreground mt-2">Item #{product.id}</p>
+          <p className="text-2xl font-semibold text-primary mt-4">
             ${Number(product.price).toFixed(2)}
           </p>
         </div>
-
-        <p className="text-muted-foreground">{product.description}</p>
 
         <div className="border-t pt-6">
           <h3 className="font-semibold mb-2">Product Details</h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>Category: {product.category_id}</li>
-            <li>SKU: {product.id}</li>
+            {product.finish && <li>Finish: {product.finish}</li>}
           </ul>
         </div>
 
