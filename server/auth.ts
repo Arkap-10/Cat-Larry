@@ -5,11 +5,34 @@ import session from "express-session";
 import createMemoryStore from "memorystore";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
-import { users, type SelectUser } from "@db/schema";
-import { db } from "@db";
-import { eq } from "drizzle-orm";
 
 const scryptAsync = promisify(scrypt);
+
+// In-memory user store
+const users = new Map<number, Express.User>();
+let nextUserId = 1;
+
+interface User {
+  id: number;
+  username: string;
+  password: string;
+  email: string;
+  name: string;
+  address: string | null;
+}
+
+declare global {
+  namespace Express {
+    interface User {
+      id: number;
+      username: string;
+      password: string;
+      email: string;
+      name: string;
+      address: string | null;
+    }
+  }
+}
 
 const crypto = {
   hash: async (password: string) => {
@@ -28,15 +51,6 @@ const crypto = {
     return timingSafeEqual(hashedPasswordBuf, suppliedPasswordBuf);
   },
 };
-
-declare global {
-  namespace Express {
-    interface User extends SelectUser {}
-    interface Request {
-      user?: SelectUser;
-    }
-  }
-}
 
 export function setupAuth(app: Express) {
   const MemoryStore = createMemoryStore(session);
@@ -64,11 +78,7 @@ export function setupAuth(app: Express) {
   passport.use(
     new LocalStrategy(async (username, password, done) => {
       try {
-        const [user] = await db
-          .select()
-          .from(users)
-          .where(eq(users.username, username))
-          .limit(1);
+        const user = Array.from(users.values()).find(u => u.username === username);
 
         if (!user) {
           return done(null, false, { message: "Incorrect username." });
@@ -90,11 +100,10 @@ export function setupAuth(app: Express) {
 
   passport.deserializeUser(async (id: number, done) => {
     try {
-      const [user] = await db
-        .select()
-        .from(users)
-        .where(eq(users.id, id))
-        .limit(1);
+      const user = users.get(id);
+      if (!user) {
+        return done(new Error('User not found'));
+      }
       done(null, user);
     } catch (err) {
       done(err);
@@ -104,13 +113,9 @@ export function setupAuth(app: Express) {
   app.post("/api/register", async (req, res, next) => {
     try {
       const { username, password, email, name } = req.body;
-      
+
       // Check if user already exists
-      const [existingUser] = await db
-        .select()
-        .from(users)
-        .where(eq(users.username, username))
-        .limit(1);
+      const existingUser = Array.from(users.values()).find(u => u.username === username);
 
       if (existingUser) {
         return res.status(400).send("Username already exists");
@@ -120,16 +125,16 @@ export function setupAuth(app: Express) {
       const hashedPassword = await crypto.hash(password);
 
       // Create the new user
-      const [newUser] = await db
-        .insert(users)
-        .values({
-          username,
-          password: hashedPassword,
-          email,
-          name,
-          address: null
-        })
-        .returning();
+      const newUser: User = {
+        id: nextUserId++,
+        username,
+        password: hashedPassword,
+        email,
+        name,
+        address: null
+      };
+
+      users.set(newUser.id, newUser);
 
       // Log the user in after registration
       req.login(newUser, (err) => {
