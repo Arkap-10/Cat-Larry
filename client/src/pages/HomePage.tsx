@@ -61,15 +61,15 @@ export default function HomePage() {
               <h1 className="relative text-6xl md:text-7xl font-bold tracking-tight leading-tight">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-primary/90">
                   Cat Larry Exports
-                  <span className="block mt-2">Premium Cutlery</span>
+                  <span className="block mt-2">Premium Food Service Equipment</span>
                 </span>
               </h1>
             </div>
             <div className="h-1 w-32 mx-auto bg-gradient-to-r from-primary/40 via-primary to-primary/40 rounded-full" />
           </div>
           <p className="text-xl text-primary/80 leading-relaxed font-light">
-            Experience the artistry of fine dining with our handcrafted
-            collection of premium kitchen knives and culinary tools.
+            Elevate your food service presentation with our premium collection
+            of kitchenware and hotelware.
           </p>
           <div className="flex gap-4 justify-center">
             <Button
@@ -131,8 +131,8 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold text-primary">Premium Quality</h3>
             <p className="text-primary/70 font-light">
-              Crafted from the finest materials, ensuring exceptional durability
-              and performance.
+              Premium stainless steel construction with superior finish and durability
+              for professional food service environments.
             </p>
           </div>
           <div className="text-center space-y-4">
