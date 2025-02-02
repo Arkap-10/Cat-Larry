@@ -69,7 +69,7 @@ export default function HomePage() {
           </div>
           <p className="text-xl text-primary/80 leading-relaxed font-light">
             Elevate your food service presentation with our premium collection
-            of display stands, cereal dispensers, and professional buffet equipment.
+            of kitchenware and hotelware.
           </p>
           <div className="flex gap-4 justify-center">
             <Button
