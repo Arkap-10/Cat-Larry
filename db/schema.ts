@@ -1,55 +1,119 @@
-import { pgTable, text, serial, integer, boolean, decimal, timestamp } from "drizzle-orm/pg-core";
-import { createInsertSchema, createSelectSchema } from "drizzle-zod";
-import { relations } from "drizzle-orm";
-
-export const categories = pgTable("categories", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  slug: text("slug").notNull().unique(),
-  description: text("description"),
-  createdAt: timestamp("created_at").defaultNow().notNull()
-});
-
-export const products = pgTable("products", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  description: text("description").notNull(),
-  price: decimal("price", { precision: 10, scale: 2 }).notNull(),
-  imageUrl: text("image_url").notNull(),
-  categoryId: integer("category_id").references(() => categories.id).notNull(),
-  featured: boolean("featured").default(false),
-  createdAt: timestamp("created_at").defaultNow().notNull()
-});
-
-export const reviews = pgTable("reviews", {
-  id: serial("id").primaryKey(),
-  productId: integer("product_id").references(() => products.id).notNull(),
-  rating: integer("rating").notNull(),
-  comment: text("comment"),
-  createdAt: timestamp("created_at").defaultNow().notNull()
-});
-
-// Relations
-export const productsRelations = relations(products, ({ one }) => ({
-  category: one(categories, {
-    fields: [products.categoryId],
-    references: [categories.id],
-  })
-}));
-
-export const categoriesRelations = relations(categories, ({ many }) => ({
-  products: many(products)
-}));
-
-// Schemas
-export const insertCategorySchema = createInsertSchema(categories);
-export const selectCategorySchema = createSelectSchema(categories);
-export const insertProductSchema = createInsertSchema(products);
-export const selectProductSchema = createSelectSchema(products);
-export const insertReviewSchema = createInsertSchema(reviews);
-export const selectReviewSchema = createSelectSchema(reviews);
+import { z } from "zod";
 
 // Types
-export type Category = typeof categories.$inferSelect;
-export type Product = typeof products.$inferSelect;
-export type Review = typeof reviews.$inferSelect;
+export interface Category {
+  id: number;
+  name: string;
+  slug: string;
+  description: string | null;
+  createdAt: Date;
+}
+
+export interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
+  categoryId: number;
+  featured: boolean;
+  createdAt: Date;
+}
+
+export interface Review {
+  id: number;
+  productId: number;
+  rating: number;
+  comment: string | null;
+  createdAt: Date;
+}
+
+// In-memory stores
+export const categories = new Map<number, Category>();
+export const products = new Map<number, Product>();
+export const reviews = new Map<number, Review>();
+
+// ID counters
+let nextCategoryId = 1;
+let nextProductId = 1;
+let nextReviewId = 1;
+
+// Schemas for validation
+export const insertCategorySchema = z.object({
+  name: z.string().min(1),
+  slug: z.string().min(1),
+  description: z.string().nullable(),
+});
+
+export const selectCategorySchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  slug: z.string(),
+  description: z.string().nullable(),
+  createdAt: z.date(),
+});
+
+export const insertProductSchema = z.object({
+  name: z.string().min(1),
+  description: z.string().min(1),
+  price: z.number().positive(),
+  imageUrl: z.string().url(),
+  categoryId: z.number(),
+  featured: z.boolean().default(false),
+});
+
+export const selectProductSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  description: z.string(),
+  price: z.number(),
+  imageUrl: z.string(),
+  categoryId: z.number(),
+  featured: z.boolean(),
+  createdAt: z.date(),
+});
+
+export const insertReviewSchema = z.object({
+  productId: z.number(),
+  rating: z.number().min(1).max(5),
+  comment: z.string().nullable(),
+});
+
+export const selectReviewSchema = z.object({
+  id: z.number(),
+  productId: z.number(),
+  rating: z.number(),
+  comment: z.string().nullable(),
+  createdAt: z.date(),
+});
+
+// Helper functions for managing data
+export const addCategory = (data: z.infer<typeof insertCategorySchema>): Category => {
+  const category: Category = {
+    id: nextCategoryId++,
+    ...data,
+    createdAt: new Date(),
+  };
+  categories.set(category.id, category);
+  return category;
+};
+
+export const addProduct = (data: z.infer<typeof insertProductSchema>): Product => {
+  const product: Product = {
+    id: nextProductId++,
+    ...data,
+    createdAt: new Date(),
+  };
+  products.set(product.id, product);
+  return product;
+};
+
+export const addReview = (data: z.infer<typeof insertReviewSchema>): Review => {
+  const review: Review = {
+    id: nextReviewId++,
+    ...data,
+    createdAt: new Date(),
+  };
+  reviews.set(review.id, review);
+  return review;
+};

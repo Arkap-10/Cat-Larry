@@ -1,23 +1,16 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { db } from "@db";
-import { products, reviews } from "@db/schema";
-import { eq, desc } from "drizzle-orm";
+import { products, reviews, addReview } from "@db/schema";
 
 export function registerRoutes(app: Express): Server {
   // Products routes
-  app.get("/api/products", async (req, res) => {
-    const allProducts = await db.query.products.findMany();
+  app.get("/api/products", async (_req, res) => {
+    const allProducts = Array.from(products.values());
     res.json(allProducts);
   });
 
   app.get("/api/products/:id", async (req, res) => {
-    const [product] = await db
-      .select()
-      .from(products)
-      .where(eq(products.id, parseInt(req.params.id)))
-      .limit(1);
-
+    const product = products.get(parseInt(req.params.id));
     if (!product) {
       return res.status(404).send("Product not found");
     }
@@ -27,11 +20,9 @@ export function registerRoutes(app: Express): Server {
   // Reviews routes
   app.get("/api/products/:id/reviews", async (req, res) => {
     const productId = parseInt(req.params.id);
-    const productReviews = await db
-      .select()
-      .from(reviews)
-      .where(eq(reviews.productId, productId))
-      .orderBy(desc(reviews.createdAt));
+    const productReviews = Array.from(reviews.values())
+      .filter(review => review.productId === productId)
+      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
     res.json(productReviews);
   });
 
@@ -44,14 +35,11 @@ export function registerRoutes(app: Express): Server {
       return res.status(400).send("Rating must be between 1 and 5");
     }
 
-    const [review] = await db
-      .insert(reviews)
-      .values({
-        productId,
-        rating,
-        comment,
-      })
-      .returning();
+    const review = addReview({
+      productId,
+      rating,
+      comment,
+    });
 
     res.json(review);
   });
