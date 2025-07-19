@@ -1,6 +1,7 @@
 import { Switch, Route } from "wouter";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import NavigationMenu from "./components/NavigationMenu";
+import WebCraftTrademark from "./components/WebCraftTrademark";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetail from "./pages/ProductDetail";
@@ -24,6 +25,7 @@ function App() {
           </Switch>
         </main>
       </ScrollArea>
+      <WebCraftTrademark />
     </div>
   );
 }
