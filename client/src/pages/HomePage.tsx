@@ -199,9 +199,3 @@ export default function HomePage() {
   );
 }
 
-<style jsx global>{`
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.1; }
-    50% { transform: scale(1.1); opacity: 0.3; }
-  }
-`}</style>

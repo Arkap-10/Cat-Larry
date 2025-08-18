@@ -1,10 +1,48 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { db } from "@db";
-import { products, reviews } from "@db/schema";
+import { products, reviews, categories } from "@db/schema";
 import { eq, desc } from "drizzle-orm";
 
 export function registerRoutes(app: Express): Server {
+  // Categories routes
+  app.get("/api/categories", async (req, res) => {
+    const allCategories = await db.query.categories.findMany();
+    res.json(allCategories);
+  });
+
+  app.get("/api/categories/:slug", async (req, res) => {
+    const [category] = await db
+      .select()
+      .from(categories)
+      .where(eq(categories.slug, req.params.slug))
+      .limit(1);
+
+    if (!category) {
+      return res.status(404).send("Category not found");
+    }
+    res.json(category);
+  });
+
+  app.get("/api/categories/:slug/products", async (req, res) => {
+    const [category] = await db
+      .select()
+      .from(categories)
+      .where(eq(categories.slug, req.params.slug))
+      .limit(1);
+
+    if (!category) {
+      return res.status(404).send("Category not found");
+    }
+
+    const categoryProducts = await db
+      .select()
+      .from(products)
+      .where(eq(products.categoryId, category.id));
+    
+    res.json(categoryProducts);
+  });
+
   // Products routes
   app.get("/api/products", async (req, res) => {
     const allProducts = await db.query.products.findMany();
