@@ -5,22 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ImageViewer } from "@/components/ImageViewer";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { ChevronRight, Package, Sparkles, Ruler, Palette } from "lucide-react";
+import { ChevronRight, Package, Sparkles, Ruler, Palette, Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 function getProductType(product: Product, categorySlug: string): string {
   const name = product.name.toUpperCase();
@@ -101,6 +87,7 @@ export default function ProductsPage() {
   const [selectedCategorySlug, setSelectedCategorySlug] = useState<string>(
     (initialCategory && categories.find(c => c.slug === initialCategory)?.slug) || categories[0]?.slug || ""
   );
+
   const productsByCategory = useMemo(() => {
     const map: Record<string, Product[]> = {};
     for (const cat of categories) {
@@ -128,6 +115,7 @@ export default function ProductsPage() {
   }, [productsByCategory]);
 
   const currentProducts = productsByCategory[selectedCategorySlug] || [];
+  const currentTypes = typesByCategory[selectedCategorySlug] || [];
   const selectedProduct = currentProducts.find(p => p.id === selectedProductId) || currentProducts[0] || null;
   const currentCategory = categories.find(c => c.slug === selectedCategorySlug);
   const dimensions = selectedProduct ? extractDimensions(selectedProduct) : null;
@@ -138,97 +126,144 @@ export default function ProductsPage() {
     setSelectedProductId(catProducts[0]?.id || "");
   };
 
-  const handleProductSelect = (productId: string) => {
-    setSelectedProductId(productId);
-  };
+  const panelHeight = "lg:h-[calc(100vh-10rem)]";
 
   return (
     <div className="py-6 space-y-4">
       <h1 className="text-2xl font-bold">Our Products</h1>
 
-      <div className="flex flex-col lg:flex-row gap-4 min-h-[calc(100vh-12rem)]">
-        {/* Category Sidebar */}
-        <div className="lg:w-72 w-full shrink-0">
+      <div className="flex flex-col lg:flex-row gap-3 min-h-[calc(100vh-10rem)]">
+
+        {/* Panel 1 — Categories */}
+        <div className="lg:w-48 w-full shrink-0">
           <Card className="h-full">
-            <CardContent className="p-0">
-              <ScrollArea className="lg:h-[calc(100vh-14rem)] h-auto">
-                <div className="p-3">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-2">
-                    Categories
-                  </p>
-                  <Accordion type="single" collapsible value={selectedCategorySlug} onValueChange={(val) => { if (val) handleCategorySelect(val); }}>
-                    {categories.map((cat) => {
-                      const catProducts = productsByCategory[cat.slug] || [];
-                      const types = typesByCategory[cat.slug] || [];
-                      return (
-                        <AccordionItem key={cat.slug} value={cat.slug} className="border-b-0">
-                          <AccordionTrigger className="px-2 py-2 text-sm hover:no-underline hover:bg-accent/50 rounded-md">
-                            <span className="flex items-center gap-2 text-left">
-                              <Package className="h-4 w-4 shrink-0 text-primary" />
-                              <span className={selectedCategorySlug === cat.slug ? "font-semibold text-primary" : ""}>
-                                {cat.name}
-                              </span>
-                            </span>
-                          </AccordionTrigger>
-                          <AccordionContent className="pb-1 pt-0 px-2">
-                            <Select
-                              value={catProducts.some(p => p.id === selectedProductId) ? selectedProductId : ""}
-                              onValueChange={handleProductSelect}
-                            >
-                              <SelectTrigger className="w-full text-xs h-9">
-                                <SelectValue placeholder="Select a product..." />
-                              </SelectTrigger>
-                              <SelectContent>
-                                {types.length > 1 ? (
-                                  types.map(type => {
-                                    const typeProducts = catProducts.filter(p => getProductType(p, cat.slug) === type);
-                                    return (
-                                      <SelectGroup key={type}>
-                                        <SelectLabel className="text-xs">{type}</SelectLabel>
-                                        {typeProducts.map(product => (
-                                          <SelectItem key={product.id} value={product.id} className="text-xs">
-                                            {product.name}
-                                          </SelectItem>
-                                        ))}
-                                      </SelectGroup>
-                                    );
-                                  })
-                                ) : (
-                                  catProducts.map(product => (
-                                    <SelectItem key={product.id} value={product.id} className="text-xs">
-                                      {product.name}
-                                    </SelectItem>
-                                  ))
-                                )}
-                              </SelectContent>
-                            </Select>
-                            <p className="text-[10px] text-muted-foreground mt-1 px-1">
-                              {catProducts.length} product{catProducts.length !== 1 ? "s" : ""}
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                      );
-                    })}
-                  </Accordion>
+            <CardContent className="p-0 h-full flex flex-col">
+              <div className="px-3 pt-3 pb-2 border-b border-border/50">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+                  Categories
+                </p>
+              </div>
+              <ScrollArea className={cn(panelHeight, "flex-1")}>
+                <div className="p-2 space-y-0.5">
+                  {categories.map((cat) => {
+                    const isActive = selectedCategorySlug === cat.slug;
+                    return (
+                      <button
+                        key={cat.slug}
+                        onClick={() => handleCategorySelect(cat.slug)}
+                        className={cn(
+                          "w-full text-left flex items-center gap-2 px-3 py-2.5 rounded-md text-sm transition-all duration-200",
+                          isActive
+                            ? "bg-primary/15 text-primary font-medium"
+                            : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
+                        )}
+                      >
+                        <Package className={cn("h-3.5 w-3.5 shrink-0", isActive ? "text-primary" : "text-muted-foreground/50")} />
+                        <span className="leading-tight">{cat.name}</span>
+                        {isActive && <ChevronRight className="h-3 w-3 ml-auto text-primary shrink-0" />}
+                      </button>
+                    );
+                  })}
                 </div>
               </ScrollArea>
             </CardContent>
           </Card>
         </div>
 
-        {/* Product Detail Card */}
+        {/* Panel 2 — Variants */}
+        <div className="lg:w-56 w-full shrink-0">
+          <Card className="h-full">
+            <CardContent className="p-0 h-full flex flex-col">
+              <div className="px-3 pt-3 pb-2 border-b border-border/50">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground truncate">
+                  {currentCategory?.name || "Variants"}
+                </p>
+                <p className="text-[10px] text-muted-foreground/60 mt-0.5">
+                  {currentProducts.length} product{currentProducts.length !== 1 ? "s" : ""}
+                </p>
+              </div>
+              <ScrollArea className={cn(panelHeight, "flex-1")}>
+                <div className="p-2 space-y-3">
+                  {currentTypes.length > 1 ? (
+                    currentTypes.map((type) => {
+                      const typeProducts = currentProducts.filter(
+                        p => getProductType(p, selectedCategorySlug) === type
+                      );
+                      return (
+                        <div key={type}>
+                          <p className="text-[10px] font-semibold uppercase tracking-widest text-primary/60 px-3 py-1.5">
+                            {type}
+                          </p>
+                          <div className="space-y-0.5">
+                            {typeProducts.map((product) => {
+                              const isSelected = selectedProductId === product.id;
+                              return (
+                                <button
+                                  key={product.id}
+                                  onClick={() => setSelectedProductId(product.id)}
+                                  className={cn(
+                                    "w-full text-left flex items-start gap-2 px-3 py-2.5 rounded-md text-xs transition-all duration-200 leading-snug",
+                                    isSelected
+                                      ? "bg-primary/15 text-primary font-medium"
+                                      : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
+                                  )}
+                                >
+                                  <span className="flex-1">{product.name}</span>
+                                  {isSelected && (
+                                    <Check className="h-3 w-3 shrink-0 mt-0.5 text-primary" />
+                                  )}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })
+                  ) : (
+                    <div className="space-y-0.5">
+                      {currentProducts.map((product) => {
+                        const isSelected = selectedProductId === product.id;
+                        return (
+                          <button
+                            key={product.id}
+                            onClick={() => setSelectedProductId(product.id)}
+                            className={cn(
+                              "w-full text-left flex items-start gap-2 px-3 py-2.5 rounded-md text-xs transition-all duration-200 leading-snug",
+                              isSelected
+                                ? "bg-primary/15 text-primary font-medium"
+                                : "text-muted-foreground hover:bg-accent/50 hover:text-foreground"
+                            )}
+                          >
+                            <span className="flex-1">{product.name}</span>
+                            {isSelected && (
+                              <Check className="h-3 w-3 shrink-0 mt-0.5 text-primary" />
+                            )}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              </ScrollArea>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Panel 3 — Product Detail */}
         <div className="flex-1 min-w-0">
           {selectedProduct ? (
-            <Card className="h-full overflow-hidden">
+            <Card className="h-full overflow-hidden flex flex-col">
               <CardContent className="p-0 flex flex-col h-full">
-                {/* Image Area - 60% */}
-                <div className="relative bg-muted" style={{ minHeight: "60%" }}>
-                  <div className="aspect-[4/3] lg:aspect-[16/9] w-full overflow-hidden cursor-pointer"
-                    onClick={() => setSelectedImage(selectedProduct.imageUrl)}>
+                {/* Image — 60% */}
+                <div className="relative bg-muted flex-[3] min-h-0">
+                  <div
+                    className="w-full h-full overflow-hidden cursor-pointer"
+                    onClick={() => setSelectedImage(selectedProduct.imageUrl)}
+                  >
                     <img
                       src={selectedProduct.imageUrl}
                       alt={selectedProduct.description}
-                      className="w-full h-full object-contain bg-muted transition-transform hover:scale-105"
+                      className="w-full h-full object-contain bg-muted transition-transform duration-500 hover:scale-105"
                       onError={(e) => {
                         const img = e.target as HTMLImageElement;
                         img.src = "/images/placeholder.jpg";
@@ -240,35 +275,38 @@ export default function ProductsPage() {
                       {currentCategory.name}
                     </Badge>
                   )}
+                  <p className="absolute bottom-3 right-3 text-[10px] text-muted-foreground/50 italic">
+                    Click image to enlarge
+                  </p>
                 </div>
 
-                {/* Details Area - 40% */}
-                <div className="p-6 space-y-4 flex-1">
+                {/* Details — 40% */}
+                <div className="flex-[2] p-6 space-y-4 overflow-y-auto border-t border-border/50">
                   <div>
                     <h2 className="text-xl lg:text-2xl font-bold leading-tight">
                       {selectedProduct.description}
                     </h2>
                     <p className="text-xs text-muted-foreground mt-1">
-                      ID: {selectedProduct.id}
+                      Ref: {selectedProduct.id}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-6">
                     {selectedProduct.finish && (
-                      <div className="flex items-center gap-2">
-                        <Palette className="h-4 w-4 text-primary" />
+                      <div className="flex items-start gap-2">
+                        <Palette className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                         <div>
-                          <p className="text-xs text-muted-foreground">Finish</p>
-                          <p className="text-sm font-medium whitespace-pre-line">{selectedProduct.finish}</p>
+                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Finish</p>
+                          <p className="text-sm font-medium whitespace-pre-line leading-snug mt-0.5">{selectedProduct.finish}</p>
                         </div>
                       </div>
                     )}
                     {dimensions && (
-                      <div className="flex items-center gap-2">
-                        <Ruler className="h-4 w-4 text-primary" />
+                      <div className="flex items-start gap-2">
+                        <Ruler className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                         <div>
-                          <p className="text-xs text-muted-foreground">Dimensions</p>
-                          <p className="text-sm font-medium">{dimensions}</p>
+                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Dimensions</p>
+                          <p className="text-sm font-medium mt-0.5">{dimensions}</p>
                         </div>
                       </div>
                     )}
@@ -278,9 +316,9 @@ export default function ProductsPage() {
                     <div>
                       <div className="flex items-center gap-2 mb-2">
                         <Sparkles className="h-4 w-4 text-primary" />
-                        <h3 className="text-sm font-semibold">Features</h3>
+                        <h3 className="text-sm font-semibold uppercase tracking-wider">Features</h3>
                       </div>
-                      <ul className="space-y-1">
+                      <ul className="space-y-1.5">
                         {selectedProduct.features.map((feature, index) => (
                           <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
                             <ChevronRight className="h-3 w-3 mt-1 shrink-0 text-primary" />
@@ -297,7 +335,7 @@ export default function ProductsPage() {
             <Card className="h-full flex items-center justify-center">
               <CardContent className="text-center py-20">
                 <Package className="h-16 w-16 mx-auto text-muted-foreground/30 mb-4" />
-                <p className="text-muted-foreground">Select a category and product to view details</p>
+                <p className="text-muted-foreground">Select a category to browse products</p>
               </CardContent>
             </Card>
           )}
