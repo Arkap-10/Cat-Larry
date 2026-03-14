@@ -11,13 +11,11 @@ const stats = [
   { value: "500+", label: "Products", icon: Sparkles },
 ];
 
-const showcaseProducts = [
+const storyProducts = [
   products.find(p => p.id === "1L0PPRTB2Q"),
   products.find(p => p.id === "GWP-64-G"),
   products.find(p => p.id === "DS4TSS"),
   products.find(p => p.id === "CD-REV-3"),
-  products.find(p => p.id === "HM-6QT"),
-  products.find(p => p.id === "KCP-64-G"),
 ].filter(Boolean);
 
 export default function HomePage() {
@@ -106,80 +104,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Premium Showcase */}
-      <section className="py-24 -mx-4">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 space-y-4">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary/60 animate-fade-in-up opacity-0">
-              Our Collection
-            </p>
-            <h2 className="text-4xl md:text-5xl font-bold animate-fade-in-up opacity-0 delay-100">
-              <span className="text-gradient-gold">Premium</span>{" "}
-              <span className="text-foreground">Products</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg animate-fade-in-up opacity-0 delay-200">
-              Each piece is a testament to superior craftsmanship, meticulously designed for the world's finest establishments.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {showcaseProducts.map((product, i) => product && (
-              <Card
-                key={product.id}
-                className="group overflow-hidden premium-border hover-lift bg-card/50 animate-fade-in-up opacity-0"
-                style={{ animationDelay: `${(i + 1) * 100}ms` }}
-              >
-                <CardContent className="p-0">
-                  <div className="relative aspect-square overflow-hidden bg-muted">
-                    <img
-                      src={product.imageUrl}
-                      alt={product.description}
-                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-                      onError={(e) => {
-                        const img = e.target as HTMLImageElement;
-                        img.src = "/images/placeholder.jpg";
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    {product.finish && (
-                      <div className="absolute top-3 right-3 px-3 py-1 rounded-full glass-card text-[10px] uppercase tracking-wider text-primary/80">
-                        {product.finish.split(" ").slice(0, 3).join(" ")}
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-5 space-y-3">
-                    <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
-                      {product.description}
-                    </h3>
-                    <div className="flex items-center justify-end">
-                      <Link href="/products" className="text-xs text-primary/60 hover:text-primary flex items-center gap-1 transition-colors">
-                        View Details <ArrowRight className="h-3 w-3" />
-                      </Link>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-primary/30 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300 px-10"
-            >
-              <Link href="/products">
-                View All Products
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Categories Grid */}
-      <section className="py-24 -mx-4 bg-gradient-to-b from-transparent via-primary/[0.03] to-transparent">
+      <section className="py-24 -mx-4">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-primary/60">Browse By Category</p>
@@ -196,7 +122,7 @@ export default function HomePage() {
               return (
                 <Link key={cat.slug} href={`/products?category=${cat.slug}`}>
                   <Card
-                    className="group cursor-pointer overflow-hidden premium-border hover-lift h-full bg-card/30 animate-fade-in-up opacity-0"
+                    className="group cursor-pointer overflow-hidden premium-border hover-lift h-full bg-card/50 animate-fade-in-up opacity-0"
                     style={{ animationDelay: `${i * 80}ms` }}
                   >
                     <CardContent className="p-0">
@@ -205,7 +131,7 @@ export default function HomePage() {
                           <img
                             src={firstProduct.imageUrl}
                             alt={cat.name}
-                            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                             onError={(e) => {
                               const img = e.target as HTMLImageElement;
                               img.src = "/images/placeholder.jpg";
@@ -307,7 +233,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 rounded-2xl blur-2xl" />
               <div className="relative grid grid-cols-2 gap-4">
-                {showcaseProducts.slice(0, 4).map((product, i) => product && (
+                {storyProducts.map((product, i) => product && (
                   <div
                     key={product.id}
                     className={`rounded-xl overflow-hidden premium-border ${i === 0 ? 'row-span-2' : ''}`}
