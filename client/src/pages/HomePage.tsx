@@ -151,10 +151,7 @@ export default function HomePage() {
                     <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors duration-300 line-clamp-2">
                       {product.description}
                     </h3>
-                    <div className="flex items-center justify-between">
-                      {product.price && (
-                        <span className="text-primary font-bold">${product.price}</span>
-                      )}
+                    <div className="flex items-center justify-end">
                       <Link href="/products" className="text-xs text-primary/60 hover:text-primary flex items-center gap-1 transition-colors">
                         View Details <ArrowRight className="h-3 w-3" />
                       </Link>

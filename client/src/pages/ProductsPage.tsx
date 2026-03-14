@@ -240,11 +240,6 @@ export default function ProductsPage() {
                       {currentCategory.name}
                     </Badge>
                   )}
-                  {selectedProduct.price && (
-                    <Badge className="absolute top-4 right-4 text-base px-3 py-1" variant="default">
-                      ${selectedProduct.price}
-                    </Badge>
-                  )}
                 </div>
 
                 {/* Details Area - 40% */}

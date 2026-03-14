@@ -31,11 +31,6 @@ export default function ProductCard({ product }: ProductCardProps) {
               {product.description}
             </h3>
           </div>
-          <div className="mt-6">
-            <p className="text-lg font-semibold text-primary">
-              ${Number(product.price).toFixed(2)}
-            </p>
-          </div>
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0">
