@@ -6,7 +6,7 @@ export default function WebCraftTrademark() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
-    window.open("https://web-craft-websites.replit.app", "_blank");
+    window.open("https://web-craft-studio.replit.app", "_blank");
   };
 
   return (
