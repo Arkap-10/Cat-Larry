@@ -41,9 +41,6 @@ export default function ProductDetail() {
       <div className="space-y-6">
         <div>
           <h1 className="text-3xl font-bold">{product.description}</h1>
-          <p className="text-2xl font-semibold text-primary mt-4">
-            ${Number(product.price).toFixed(2)}
-          </p>
         </div>
 
         <div className="border-t pt-6">
